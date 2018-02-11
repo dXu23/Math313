@@ -1,0 +1,180 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{enumitem}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 2}
+\begin{document}
+\maketitle
+\begin{enumerate}[label*=\arabic*.]
+\item
+  \setcounter{enumi}{3}
+  \begin{enumerate}[label*=\arabic*.]
+    \setcounter{enumii}{7}
+    \item
+      \begin{enumerate}
+      \item Infima: 0, Suprema: 1
+      \item Infima: -1, Suprema: 1
+      \item Infima: \(\frac{1}{4}\), Suprema: \(\frac{1}{3}\)
+      \item Infima: 0, Suprema: 1
+      \end{enumerate}
+  \end{enumerate}
+
+  \begin{enumerate}[label*=\arabic*.]
+    \setcounter{enumi}{4}
+  \item
+    \begin{enumerate}
+    \item Let \(a = \frac{m}{n}\) and \(b = \frac{p}{q}\). Then
+      \begin{IEEEeqnarray*}{r C l}
+        ab & = & \frac{m}{n} \cdot \frac{p}{q} \\
+        & = & \frac{mp}{nq}
+      \end{IEEEeqnarray*}
+
+    \begin{IEEEeqnarray*}{r C l}
+      a + b & = & \frac{m}{n} + \frac{p}{q} \\
+      & = & \frac{mq}{qn} + \frac{pn}{qn} \\
+      & = & \frac{mq + pn}{qn}
+    \end{IEEEeqnarray*}
+    Since \(ab\) and \(a + b\) can be written as fractions, by
+    definition, they must be rational. Therefore, the set of
+    rational numbers are closed under addition and multiplication. 
+ 
+\item Let us assume that \(a + t \in \mathbb{Q}\). Then we should be able write
+  \(a + t\) as \(p / q\), where \(p\) and \(q\) are integers. The same goes for
+  \(a\). Then
+  \begin{IEEEeqnarray*}{r C l}
+    \frac{m}{n} + t & = & \frac{p}{q} \\
+    t & = & \frac{p}{q} - \frac{m}{n} \\
+    & = & \frac{pn}{qn} - \frac{mq}{qn} \\
+    & = & \frac{pn - mq}{qn}
+  \end{IEEEeqnarray*}
+  This, however, contradicts our given statement that \(t\) is irrational. Therefore,
+  \(a + t\) cannot be rational, so \(a + t \in \mathbb{I}\). As for showing that \(at \in \mathbb{I}\),
+  we proceed in a similar fashion: assume that \(at \in \mathbb{Q}\). Then
+  \begin{IEEEeqnarray*}{r C l}
+    \frac{m}{n} \cdot t & = & \frac{p}{q} \\
+    t & = & \frac{p}{q} \cdot \frac{m}{n} \\
+    & = & \frac{pm}{qn}
+  \end{IEEEeqnarray*}
+  Once again, we reach a contradiction. Since \(t\) is irrational, it cannot be
+  written as a fraction, so therefore, \(at \in \mathbb{I}\).
+\item If \(s, t \in \mathbb{I}\), then \(s + t \not\in I\) and \(st \not\in I\). Let
+  \(s = -\sqrt{2}\). Let \(t = \sqrt{2}\), which
+    we proved to irrational in the first chapter. Then \(s + t = 0\), which is a rational
+    number.
+    
+  Let \(s = \sqrt{2}\) and \(t = \sqrt{2}\). Then \(st = \sqrt{2} \cdot \sqrt{2} = 2\).
+  2 is a rational number, even though \(\sqrt{2}\) is not rational.
+    \end{enumerate}
+  \item We approach this problem in a similar fashion as \textbf{Theorem 1.4.5}. First, we
+    assume that \(s \neq \text{sup} A\). In order for this to be true, there must exist a
+    real number \(a \in A\) such that \(a > s\). In search of a real number greater than
+    \(s\), let \(a = s + r\), where \(r\) is a real number. However, we can do a little
+    better than that. By the second part of the \textbf{Archimedean Property}, we can choose
+    a rational number \(1 / n\) such that \(1 / n < r\). So we let \(a = s + \frac{1}{n}\),
+    which will be less than the quantity \(s + r\). However, it is given that \(s + \frac{1}{n}\)
+    is an upper bound for \(A\) for all \(n \in \mathbb{N}\)! Thus, we now know that \(s\)
+    must be an upper bound for \(A\).
+
+    However, in order for \(s = \text{sup} A\), for any upper bound \(b\) of \(A\), \(s \geq b\).
+    We assume that the opposite is true, that there exists \(b\) such that \(s < b\).
+    In search of such a \(b\), we might set \(b = s - t\), where \(t \in \mathbb{R}\).
+    We can do better than that, since by the \textbf{Archimedean Property} (again), we can choose
+    a rational number \(1 / n\) such that \(1 /n < t\). So we set \(b = s - \frac{1}{n}\) in
+    hope of finding a \(b\) that is less than \(s\). As given by the problem though, \(b - \frac{1}{n}\)
+    is not an upper bound for \(A\)! Thus, there does not exist an upper bound \(b\) such that
+    \(s < b\), so we can safely conclude that \(s \geq b\).
+
+    Thus, we have proven the two requirements for \(s = \text{sup } A\).
+    \setcounter{enumii}{5}
+  \item
+    \begin{enumerate}
+    \item Not dense in \(\mathbb{R}\). Since \(\mathbb{Q} \subset \mathbb{R}\), any rational
+    number is also a real number. Let \(a = 1 / 100\) and \(b = 0\). Assume that there exists
+    \(p\) and \(q\) such that \(0 < p / q > 1 / 100\) with \(q \leq 10\), \(p \in \mathbb{Z}\) and
+    \(q \in \mathbb{N}\). Then
+    \begin{IEEEeqnarray*}{r C l}
+      0 & < & \frac{p}{q}  <  \frac{1}{100} \\
+      100q \cdot 0 & < & 100q \cdot \frac{p}{q} < 100q \cdot \frac{1}{100} \\
+      0 & < & 100p < q \\
+      0 & < & 100p < q \leq 10 \\
+      0 & < & 100p \leq 10 \\
+      0 & < & p \leq \frac{1}{10}
+    \end{IEEEeqnarray*}
+    However, this contradicts the fact that \(p \in \mathbb{Z}\) since there
+    are no integers greater than zero but less than \(1 / 10\). Therefore, the set
+    is not dense in \(\mathbb{R}\).
+  \item Dense. If \(q\) was just a natural number, then we would already be done since
+    we proved that the rational numbers were dense in the reals. Even though \(q\)
+    must be a power of 2, we can still proceed in a similar fashion if we show that
+    for any real number \(x \in \mathbb{R}\), there exists \(q : q = 2^{k} \text{ for some } k \in \mathbb{N}\).
+    such that \(q > x\). In this case, let \(T = {q : q = 2^{k} \text{ for some } k \in \mathbb{N}\).
+    For contradiction, we assume that \(T\) is bounded above. By \textbf{AoC}, \(T\)
+    should have a least upper bound, so we can set \(\alpha = \text{sup } T\). If we
+    consider \(\alpha - 2^{p}\) for some \(p\) 
+      
+    
+    
+  \end{enumerate}
+   
+  
+\setcounter{enumii}{3}
+\setcounter{enumi}{5}
+\item
+  \begin{enumerate}
+  \item It is known that the function \(f(x) = \frac{x}{(x - 1)(x + 1)}\) is a bijection
+  from the interval (-1,1) to the real numbers. We get a similar bijective function if
+  we translate \(f(x)\) to halfway the interval \((a,b)\) and then increase the width of
+  the translated \(f(x)\) by a factor of \((b - a) / 2\).
+  Recall that the function
+  \[f(x) = \frac{x}{1-x^{2}}\]
+  is a bijection \((-1,1) \rightarrow \mathbb{R}\).
+  \[ g: (a,b) \rightarrow (-1,1) \\
+  g(x) = \lambda x + \tau \\
+  g(b) = 1
+  \lambda a + \tau = -1 \\
+  \lambda b + \tau = 1 \\
+  \lambda (b - a) = 2 \\
+  \lambda = \frac{2}{b - a} \\
+  \tau = 1 - \]
+
+  Finally, \(f g : (a,b) \rightarrow \mathbb{R}\) is a bijection. 
+\item By the Archimedean property, we can choose \(b \in \mathbb{N}\) such that \(b > a\). Let
+  \(f(x) = \frac{x^2 - b^2}{x - a}\) with domain \((a, \infty)\). If \(f(x)\) is a bijection from
+  \((a, \infty\) to the reals, then \((a, \infty) ~ \mathbb{R}\). To show that \(f(x)\) is a
+  bijection, we show that \(f(x)\) is an injection and surjection first. For the case of surjection,
+  we must show that for every \(r \in \mathbb{R}\), there exists \(x \in (a, \infty)\) such that
+  \(f(x) = r\).
+  \begin{IEEEeqnarray*}{r C l}
+    \frac{x^{2} - b^{2}}{x - a} & = & r \\
+    x^{2} - b^{2} & = & r \cdot (x - a) \\
+    x^{2} - b^{2} & = & rx - ra \\
+    x^{2} - rx -b^{2} + ra & = & 0 \\
+    x & = & \frac{r + \sqrt{r^{2} - 4 \left(ra - b^{2} \right)}}{2}
+  \end{IEEEeqnarray*}
+  Thus, for every \(r \in \mathbb{R}\), we have a corresponding \(x\) such that \(f(x) = r\), showing
+  that \(f(x)\) is a surjection.
+
+  Now, we must show that \(f\) is surjective or that \(f(x_{1} = f(x_{2}) \implies x_{1} = x_{2} \).
+  \begin{IEEEeqnarray*}{r C l}
+    f \left(x_{1}\right) & = & f \left(x_{2}\right) \\
+    \frac{x_{1}^{2} - b^{2}}{x_{1} - a} & = & \frac{x_{2}^{2} - b^{2}}{x_{2} - a} \\
+    \left(x_{1}^{2} - b^{2} \right) \left(x_{2} - a \right) & = & \left(x_{2}^{2} - b^{2} \right) \left(x_{1} - a \right) \\
+    x_{2} x_{1}^{2} - ax_{1}^{2} - b^{2} x_{2} + ab^{2} & = & x_{1} x_{2}^{2} - ax_{2}^{2} - b^{2} x_{1} + ab^{2} \\
+    x_{2} x_{1}^{2} - x_{1} x_{2}^{2} + ax_{2}^{2} - ax_{1}^{2} - b^{2} x_{2} + b^{2} x_{1} & = & 0 \\
+    x_{2} x_{1} \cdot \left(x_{1} - x_{2}\right) + a \left(x_{2} - x_{1} \right) \left(x_{2} + x_{1} \right) + b^{2} (x_{1} - x_{2} ) & = & 0 \\
+    \left(x_{1} - x_{2} \right) \cdot \left[ x_{1} x_{2} + b^{2} - ax_{1} -ax_{2}] & = & 0
+  \end{IEEEeqnarray*}
+  The only way for the last line to be true is if \(x_{1} = x_{2}\), so \(f(x)\) is also
+  injective. Therefore, \(f\) is bijective and \((a, \infty) \sim \mathbb{R}\). 
+  
+
+  \end{enumerate}
+\item Since \(C \subset [0,1]\), then we can say that is bounded below by zero. By the
+  \textbf{AoC} for the lower bound, we know that there exists \(m\) such that
+  \(m = \text{inf } C\). Set \(a = m\)
+
+  \end{enumerate}
+  \end{enumerate}
+\end{document}

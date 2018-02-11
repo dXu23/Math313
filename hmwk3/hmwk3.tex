@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amssymb}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 3}
+\begin{document}
+\maketitle
+\textbf{Exercise 2.2.1} An example of a vercongent sequence would be
+\(x_{n} = \sin x\). Let \(\epsilon = \frac{101}{100}\) and let \(x = 0\).
+Then \(x_{n}\) converges to 0, since \(\left| \sin x - 0 \right| < \frac{101}{100} \).
+Since \(x_{n}\) does not converge to any number, it is a vercongent sequence
+that is also divergent. What a vercongent sequence describes is a sequence
+for whom all values lie in a certain bound, namely \((x - \epsilon, x + \epsilon)\).
+
+\textbf{Excercise 2.2.2}
+\begin{enumerate}
+\item Let \(\epsilon > 0\) be arbitrary. Now choose \(N\) such that
+  \[N > \frac{3}{25 \epsilon} - \frac{4}{5}\]
+  To verify that our choice of \(N\) is appropiate, let \(n \in \mathbb{N}\)
+  satisfy \(n \geq N\). Then, \(n \geq N\) implies that
+  \begin{IEEEeqnarray*}{r C l}
+    n & > & \frac{3}{25 \epsilon} - \frac{4}{5} \\
+    5n & > & \frac{3}{5 \epsilon} - 4 \\
+    5n + 4 & > & \frac{3}{5 \epsilon} \\
+    \epsilon & > & \frac{3}{5 \cdot (5n + 4)} \\
+    \epsilon & > & \frac{2 \cdot (5n + 4) - 5 \cdot (2n + 1)}{5 \cdot (5n + 4)} \\
+    \epsilon & > & \frac{2 \cdot (5n + 4)}{5 \cdot (5n + 4)} - \frac{5 \cdot (2n + 1)}{5 \cdot (5n + 4)} \\
+    \epsilon & > & \frac{2}{5} - \frac{2n +1}{5n + 4} \\
+    \epsilon & > & \left| \frac{2}{5} - \frac{2n + 1}{5n + 4} \right| \\
+    \left| \frac{2}{5} - \frac{2n + 1}{5n + 4} \right| & < & \epsilon \\
+    \left| \frac{2n + 1}{5n + 4} - \frac{2}{5} \right| & < & \epsilon
+  \end{IEEEeqnarray*}
+
+\item
+
+  
+\end{enumerate}
+\textbf{2.3.1}
+\begin{enumerate}
+\item If \(x_{n} \rightarrow 0\), then there exists \(\epsilon_{0} > 0\) such that
+  there exists \(N \in \mathbb{N}\) for all \(n \geq \mathbb{N}\),
+  \(x_{n} - 0 < \epsilon_{0}\). 
+\end{enumerate}
+
+\textbf{2.3.1}
+\begin{enumerate}
+\item If \(x_{n} \rightarrow 0\), then it must be true that for all \(\epsilon_{0}\)
+  , there exists a \(N \in \mathbb{N}\) such that for all \(n \geq N\),
+  \(\left| x_{n} - 0 \right| < \epsilon_{0}\). Then
+  \begin{IEEEeqnarray*}{r C l"s}
+    \left| x_{n} - 0 \right| & < & \epsilon_{0} \\
+    x_{n} & < & \epsilon_{0} & since \(x_{n} \geq 0\) \\
+    \sqrt{x_{n}} & < & \sqrt{\epsilon_{0}}
+    \end{IEEEeqnarray*}
+\end{enumerate}
+
+\textbf{Exercise 2.3.7}
+\begin{enumerate}
+\item Let \(x_{n} = n\) and \(y_{n} = -n\). Both \(x_{n}\) and \(y_{n}\) diverge. However,
+  \(x_{n} + y_{n}\) converge to zero.
+
+\item Let \(b_{n} = \frac{1}{n}\) with \(b_{n} \neq 0\) for all \(n \in \mathbb{N}\). However,
+  \((1 / b_{n})\) diverges.
+
+\item Let \(a_{n} = \frac{1}{n}\) and \(b_{n} = n\). \(a_{n}\) converges to 0 and \(b_{n}\)
+  diverges. \((a_{n} b_{n})\) converges to 1. 
+
+\end{enumerate}
+
+
+
+\end{document}

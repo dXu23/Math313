@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\section{Irrationality of \(\sqrt{2}\)}
+\begin{theorem}
+There is no irrational number whose square is 2. 
+\end{theorem}
+
+\begin{proof}
+  A rational number is any number that can be expressed in the form \(p / q\),
+  where \(p\) and \(q\) are integers. We proceed by contradiction and assume
+  that there is a rational number whose square is 2. We also assume that this
+  rational number is completely reduced. Then
+  \begin{IEEEeqnarray*}{r C l"s}
+    \left(\frac{p}{q}\right)^{2} & = & 2 \\
+    p^{2} & = & 2q^{2} & So \(p\) must be an even number. Let \(p = 2r\) with \(r \in \mathbb{Z}\) \\
+    \left(2r \right)^{2} & = & 2q^{2} \\
+    4r^{2} & = & 2q^{2} \\
+    2r^{2} & = & q^{2} & WHAT!? So then \(q\) is also even!? But \(p / q\) was supposed to be completely reduced!
+  \end{IEEEeqnarray*}
+  As we can see, \(p / q\) was supposed to be completely reduced, yet we showed
+  that it was not. Therefore, \(\sqrt{2}\) cannot be irrational. 
+  
+\end{proof}
+
+
+\end{document}

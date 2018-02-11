@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\section{Irrationality of \(\sqrt{2}\)}
+\begin{theorem}
+There is no irrational number whose square is 2. 
+\end{theorem}
+
+\end{document}
