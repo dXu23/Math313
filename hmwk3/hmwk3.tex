@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{amssymb}
+\usepackage{enumerate}
 \author{Daniel Xu}
 \title{MATH 313 HMWK 3}
 \begin{document}
@@ -14,7 +15,7 @@ that is also divergent. What a vercongent sequence describes is a sequence
 for whom all values lie in a certain bound, namely \((x - \epsilon, x + \epsilon)\).
 
 \textbf{Excercise 2.2.2}
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item Let \(\epsilon > 0\) be arbitrary. Now choose \(N\) such that
   \[N > \frac{3}{25 \epsilon} - \frac{4}{5}\]
   To verify that our choice of \(N\) is appropiate, let \(n \in \mathbb{N}\)
@@ -32,43 +33,93 @@ for whom all values lie in a certain bound, namely \((x - \epsilon, x + \epsilon
     \left| \frac{2n + 1}{5n + 4} - \frac{2}{5} \right| & < & \epsilon
   \end{IEEEeqnarray*}
 
-\item
+\item Let \(\epsilon > 0\) be arbitrary and let \(a_{n} = 2n^{2} / \left(n^{3} + 3\right)\).
+  Choose \(N \in \mathbb{N}\) with \(N > \frac{4}{\epsilon^{2}}\). Now, we must show that for
+  all \(n \in \mathbb{N}\), \(n \geq N\) satisfies \(\left|a_{n} - L \right| < \epsilon\).
+  If \(n \geq N\), then
+  \begin{IEEEeqnarray*}{r C l}
+    n & > & \frac{4}{\epsilon^{2}} \\
+    \sqrt{n} & > & \frac{2}{\epsilon} \\
+    \frac{2}{\sqrt{n}} & < \epsilon
+  \end{IEEEeqnarray*}
+  If we can show that \(2 / \sqrt{n} > \frac{2n^{2}}{n^{3} + 3}\), then we
+  are done. So,
+  \begin{IEEEeqnarray*}{r C l}
+    \frac{2n^{2}}{n^{3} + 3} & < & \frac{2}{\sqrt{n}} \\
+    \frac{1}{n^{3} + 3} & < & \frac{1}{\sqrt{n^{5}}} \\
+    n^{3} + 3 & > & \sqrt{n^{5}}
+  \end{IEEEeqnarray*}
+  The last line is a true statement, so we are done. 
+  
+  
+\item Let \(\epsilon > 0\) be arbitrary. Choose \(N \in \mathbb{N}\) with
+  \(N > \frac{1}{\epsilon^{3}} \). To verify that the choice of \(N\) was
+  appropiate, let \(n \in \mathbb{N}\) satisfy \(n \geq N\). Then
+  \begin{IEEEeqnarray*}{r C l}
+    n & \geq & \frac{1}{\epsilon^{3}} \\
+    \frac{1}{n} & \leq & \epsilon^{3} \\
+    \sqrt[3]{\frac{1}{n}} & \leq & \sqrt[3]{\epsilon^{3}} \\
+    \frac{1}{\sqrt[3]{n}} & \leq & \epsilon \\
+    \frac{\sin \left(n^{2} \right)}{\sqrt[3]{n}} & \leq & \sin \left(n^{2} \right) \cdot \epsilon
+  \end{IEEEeqnarray*}
+  However, \(-1 \leq \sin x \leq 1\), so
+  \[\left| \frac{\sin \left(n^{2} \right)}{\sqrt[3]{n}} - 0 \right| \leq \epsilon\]
 
   
 \end{enumerate}
-\textbf{2.3.1}
-\begin{enumerate}
-\item If \(x_{n} \rightarrow 0\), then there exists \(\epsilon_{0} > 0\) such that
-  there exists \(N \in \mathbb{N}\) for all \(n \geq \mathbb{N}\),
-  \(x_{n} - 0 < \epsilon_{0}\). 
+\textbf{Exercise 2.3.1}
+\begin{enumerate}[(a)]
+\item If \(x_{n} \rightarrow 0\), then for any \(\epsilon_{0} > 0\) 
+  there exists \(N_{0} \in \mathbb{N}\) such that for all \(n \geq \mathbb{N_{0}}\),
+  \(|x_{n} - 0| < \epsilon_{0}\). Since \(x_{n} \geq 0\), then
+  \begin{IEEEeqnarray*}{r C l}
+    x_{n} & < & \epsilon_{0} \\
+    \sqrt{x_{n}} & < & \sqrt{\epsilon_{0}} \\
+    \sqrt{x_{n}} - 0 & < & \sqrt{\epsilon_{0}} \\
+    \left|\sqrt{x_{n}} - 0 \right| & < & \sqrt{\epsilon_{0}} \\
+  \end{IEEEeqnarray*}
+  Now, we can just set any \(\epsilon\) given to us to \(\sqrt{\epsilon_{0}}\).
+  To supply a given \(N\) for an \(\epsilon\), we can use the \(N_{0}\) supplied
+  to us by \(\epsilon_{0}\).
+
+\item If \(x_{n} \rightarrow x\), then for any \(\epsilon_{0} > 0\), there exists
+  \(N_{0} \in \mathbb{N_{0}}\) such that for all \(n \geq \mathbb{N}\),
+  \(\left| x_{n} - x \right| < \epsilon_{0}\). Since \(x_{n} \geq 0\), so is \(x\).
+  Then
+  \begin{IEEEeqnarray*}{r C l}
+    x_{n} - x & < & \epsilon_{0} \\
+    x_{n} & < & \epsilon_{0} + x \\
+    \sqrt{x_{n}} & < & \sqrt{\epsilon_{0} + x} \\
+    \sqrt{x_{n}} - \sqrt{x} & < & \sqrt{\epsilon_{0} + x} - \sqrt{x} \\
+    \left|\sqrt{x_{n}} - \sqrt{x} \right| & < & \sqrt{\epsilon_{0} + x} - \sqrt{x} \\
+  \end{IEEEeqnarray*}
+  We can use the same strategy as last time. We let any \(\epsilon\) given to us
+  be equal to \(\sqrt{\epsilon_{0} + x} - \sqrt{x}\) and solve for that particular
+  \(\epsilon_{0}\). Then, we can find a \(N_{0}\) that satisfies the definition of
+  convergence for \(x_{n}\). We set \(N = N_{0}\) and we have an algorithm for finding
+  a \(N\) for any given \(\epsilon\). 
+  
 \end{enumerate}
 
-\textbf{2.3.1}
-\begin{enumerate}
-\item If \(x_{n} \rightarrow 0\), then it must be true that for all \(\epsilon_{0}\)
-  , there exists a \(N \in \mathbb{N}\) such that for all \(n \geq N\),
-  \(\left| x_{n} - 0 \right| < \epsilon_{0}\). Then
-  \begin{IEEEeqnarray*}{r C l"s}
-    \left| x_{n} - 0 \right| & < & \epsilon_{0} \\
-    x_{n} & < & \epsilon_{0} & since \(x_{n} \geq 0\) \\
-    \sqrt{x_{n}} & < & \sqrt{\epsilon_{0}}
-    \end{IEEEeqnarray*}
-\end{enumerate}
 
-\textbf{2.3.5} If \(x_{n}\) and \(y_{n}\) are both convergent, then there
+\textbf{Exercise 2.3.5} If \(x_{n}\) and \(y_{n}\) are both convergent, then there
 must exist a \(N_{1} , N_{2} \in \mathbb{N}\) such that for all \(n_{1} \geq N_{2}\)
 and for all \(n_{2} \geq N_{2}\), \(\left| a_{n} - L \right| < \epsilon_{1}\) and
 \(\left| b_{n} - L \right| < \epsilon_{2}\) for any \(\epsilon > 0\) since \(a_{n}\)
 and \(b_{n}\) both converge to the same limit. In the case of \(z_{n}\), we choose
 \(N = \max(N_{1}, N_{2})\). Then for all \(n \geq N\), we know that
-\(\left|z_{n} - L \right| < \epsilon\).
+\(\left|z_{n} - L \right| < \epsilon\). Thus \(z_{n}\) must converge. 
 
 Now we must prove the converse. We start with the fact that \(z_{n}\) is convergent.
-Then by definition, for any \(\epsilon > 0\) 
+Then by definition, for any \(\epsilon > 0\), there exists \(N \in \mathbb{N}\) such
+that for any \(n \in \mathbb{N}\) greater than or equal to \(N\),
+\(z_{n} - L < \epsilon\), where \(L\) is the limit that \(z_{n}\) converges to. If
+we split \(z_{n}\) into \(x_{n}\) and \(y_{n}\), we can use the same \(N\) when
+given an \(\epsilon\) for \(x_{n}\) or \(y_{n}\). 
 
 
 \textbf{Exercise 2.3.7}
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item Let \(x_{n} = n\) and \(y_{n} = -n\). Both \(x_{n}\) and \(y_{n}\) diverge. However,
   \(x_{n} + y_{n}\) converge to zero.
 
@@ -84,7 +135,5 @@ Then by definition, for any \(\epsilon > 0\)
   diverges. \((a_{n} b_{n})\) converges to 1.
 
 \end{enumerate}
-
-
 
 \end{document}
