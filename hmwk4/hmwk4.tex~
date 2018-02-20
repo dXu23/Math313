@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{enumerate}
+\begin{document}
+\textbf{Problem 2.3.4}
+\begin{enumerate}[(a)]
+\item
+  \begin{IEEEeqnarray*}{r C l}
+    \lim \left(\frac{1 + 2a_{n}}{1 + 3a_{n} - 4a_{n}^{2}}\right) & = & \frac{\lim (1 + 2a_{n})}{\lim (1 + 3a_{n} - 4a_{n}^{2})} \\
+    & = & \frac{1}{1} \\
+    & = & 1
+  \end{IEEEeqnarray*}
+\item
+  \begin{IEEEeqnarray*}{r C l}
+    \lim \left( \frac{(a_{n} + 2)^{2} - 4}{a_{n}} \right) & = & \lim \left( \frac{a_{n}^{2} + 4 a_{n} + 4 - 4}{a_{n}} \right) \\
+    & = & \lim \left( \frac{a_{n}^{2} + 4 a_{n}}{a_{n}}\right) \\
+    & = & \lim (a_{n} + 4) \\
+    & = & \lim (a_{n}) + 4 \\
+    & = & 0 + 4 \\
+    & = & 4
+  \end{IEEEeqnarray*}
+\item
+  \begin{IEEEeqnarray*}{r C l}
+    \lim \left(\frac{\frac{2}{a_{n}} + 3}{\frac{1}{a_{n}} + 5} \right) & = & \lim \left(\frac{\frac{2}{a_{n}} + 3}{\frac{1}{a_{n}} + 5} \cdot \frac{a_{n}}{a_{n}} \right) \\
+    & = & \lim \left(\frac{2 + 3 a_{n}}{1 + 5 a_{n}} \right) \\
+    & = & \left(\frac{ \lim (2 + 3 a_{n})}{ \lim (1 + 5 a_{n}} \right) \\
+    & = & 2
+    \end{IEEEeqnarray*}
+\end{enumerate}
+
+\textbf{Problem 2.3.9}
+\begin{enumerate}[(a)]
+
+\item If \((a_{n})\) is bounded, then there exists a number \(M > 0\) such
+  that \(|a_{n}| \leq M\). If \(\lim b_{n} = 0\), then for all \(\epsilon_{0} > 0\),
+  there exists a \(N_{0} \in \mathbb{N}\) such that whenever \(n \geq N_{0}\) it
+  follows that \(|b_{n} - 0| < \epsilon_{0}\). Then
+  \begin{IEEEeqnarray*}{r C l}
+    |b_{n} - 0| & < & \epsilon_{0} \\
+    |b_{n}| & < & \epsilon_{0} \\
+    |a_{n}| \cdot |b_{n}| & < & M \cdot \epsilon_{0} \\
+    |a_{n} \cdot b_{n} | & < & M \cdot \epsilon_{0} \\
+    |a_{n} \cdot b_{n} - 0 | & < & M \cdot \epsilon_{0}
+  \end{IEEEeqnarray*}
+  Whatever \(\epsilon\) is chosen, we can find a \(N\) for \(\epsilon\) for the
+  sequence \((a_{n} b_{n})\) satisfying the definition of convergence in the following
+  way. Divide the \(\epsilon\) by the upper bound \(M\) to get a \(\epsilon_{0}\) and
+  find a \(N_{0}\) for that \(\epsilon\) for the case of \(b_{n}\). Then, we can use
+  the same \(N_{0}\) as \(N\) for \(a_{n} b_{n}\). Thus, \(\lim (a_{n} b_{n}) = 0\) since
+  a \(N\) can be found for any \(\epsilon\) that satisfies the condition of convergence.
+  We are not allowed to use the Algebraic Limit Theorem because it is not known whether
+  \(a_{n}\) is convergent.
+\end{enumerate}
+
+\textbf{Problem 2.3.11}
+
+\textbf{Problem 2.4.3}
+  \begin{IEEEeqnarray*}{r C l}
+    x & = & \sqrt{2 + x} \\
+    x^{2} & = & 2 + x \\
+    x^{2} - x - 2 & = & 0 \\
+    (x + 1)(x - 2) & = & 0 \\
+    x & = & -1 \text{ or } 2 \\
+  \end{IEEEeqnarray*}
+
+  \textbf{Problem 2.4.5}
+  \begin{enumerate}[(a)]
+  \item We proceed by induction. For the base case, \(x_{1}^{2} = 2^{2} = 4 \geq 2\). Now
+    for the inductive step. We must now show that if \(x_{k}^{2} \geq 2\), then
+    \(x_{k+1}^{2} \geq 2\). So
+    \begin{IEEEeqnarray*}{r C l}
+      x_{k}^{2} & \geq & 2 \\
+      x_{k}^{2} - 2 & \geq & 0 \\
+      \left(x_{k}^{2} - 2 \right)^{2} & \geq & 0 \\
+      x_{k}^{4} - 4 x_{k}^{2} + 4 & \geq & 0 \\
+      x_{k}^{2} - 4 + \frac{4}{x_{k}^{2}} & \geq & 0 \\
+      x_{k}^{2} + 4 + \frac{4}{x_{k}^{2}} & \geq & 8 \\
+      \frac{1}{4} \left(x_{k}^{2} + 4 + \frac{4}{x_{k}^{2}} \right) & \geq & 2 \\
+      \frac{1}{4} \left(x_{k} + \frac{2}{x_{k}} \right)^{2} & \geq & 2 \\
+      x_{k + 1}^{2} & \geq & 2
+    \end{IEEEeqnarray*}
+    Thus, we know that \(x_{n}^{2} \geq 2\). Now, we have to show that \(x_{n} - x_{n + 1} \geq 0\).
+    So
+    \begin{IEEEeqnarray*}{r C l}
+      x_{n}^{2} & \geq & 2 \\
+      x_{n}^{2} - 2 & \geq & 0 \\
+      \frac{1}{2 x_{n}} \cdot \left(x_{n}^{2} - 2 \right) & \geq & \frac{1}{2 x_{n}} \cdot 0 \\
+      \frac{1}{2} x_{n} - \frac{1}{x_{n}} & \geq 0 \\
+      \frac{1}{2} x_{n} + \frac{1}{2} x_{n} - \frac{1}{2} x_{n} - \frac{1}{x_{n}} & \geq & 0 \\
+      x_{n} - \frac{1}{2} \left(x_{n} + \frac{2}{x_{n}} \right) & \geq & 0 \\
+      x_{n} - x_{n + 1} & \geq & 0 
+    \end{IEEEeqnarray*}
+  \item Let \(x_{1} = c\) and define
+    \[x_{n + 1} = \frac{x_{n} + \frac{x_{n}}{c}}{2}\]
+  \end{enumerate}
+  \textbf{Problem 2.4.8}
+  \begin{enumerate}[(a)]
+  \item A explicit formula would be \(1 - \frac{1}{2^{n}}\). The sequence converges to 1.
+  \item A explicit formula would be \(\frac{n}{n + 1}\). The sequence converges to 1. 
+    \item A explicit formula would be \(\log (n + 1)\). 
+  \end{enumerate}
+  
+
+\end{document}
