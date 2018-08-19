@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 5}
+\begin{document}
+\maketitle
+\textbf{Exercise 2.6.2}
+\begin{enumerate}[(a)]
+\item The sequence \(a_{n} = \sin n / n\) is a Cauchy sequence that is not
+  monotone. \(-1 < \sin n < 1\), so \(-1 / n < \sin n / n < 1 / n\). By the
+  Squeeze theorem, \(a_{n}\) converges to 0 since both \(1 / n\) and \(- 1 / n\)
+  converge to zero. By the Cauchy Criterion, \(a_{n}\) must also be a Cauchy sequence.
+  It is easily seen that \(a_{n}\) is not monotone, as \(a_{1} > 0\), \(a_{4} < 0\),
+  and \(a_{7} > 0\).
+\item Impossible. By Lemma 2.6.3, all Cauchy sequences are bounded, so any
+  subsequences of Cauchy sequences will also be bounded.
+  \item Impossible
+\item The sequence \[a_{n} = e^{n} \sin \left(\frac{\pi}{2} n \right)\] is such a
+  sequence.
+\end{enumerate}
+
+\textbf{Exercise 2.6.5}
+(i) is false and (ii) is true. For (ii), we are given that
+  \((x_{n})\) and \((y_{n})\) are psudo-Cauchy and we want to show that for any
+  \(\epsilon\) given, there exists \(N\) such that for all \(n \geq N\),
+  \(\left| \left(x_{n + 1} + y_{n + 1} \right) - \left(x_{n} + y_{n} \right) \right| < \epsilon\).
+  Since it is given that \((x_{n})\) and \((y_{n})\) are psuedo-Cauchy, we know that
+  there exists \(N_{1}\) and \(N_{2}\) that satisfy the definition of psudo-Cauchiness
+  for any real number given. We choose the error for both \(x_{n}\) and \(y_{n}\) to
+  be \(\epsilon / 2\). Then we observe that
+  \begin{IEEEeqnarray*}{r C l"s}
+    \left|x_{n + 1} - x_{n} \right| & < & \frac{\epsilon}{2} \\
+    \left|y_{n + 1} - y_{n} \right| & < & \frac{\epsilon}{2} \\
+    \left|x_{n + 1} - x_{n} \right| + \left|y_{n + 1} - y_{n} \right| & < & \epsilon \\
+    \left| \left(a_{n + 1} - a_{n} \right) + \left(b_{n + 1} - b_{n} \right) \right| & \leq & \left|x_{n + 1} - x_{n} \right| + \left|y_{n + 1} - y_{n} \right| < \epsilon & By triangle inequality \\
+    \left| \left(a_{n + 1} - a_{n} \right) + \left(b_{n + 1} - b_{n} \right) \right| < \epsilon 
+  \end{IEEEeqnarray*}
+  For choosing \(N\) for \(\epsilon > 0\), just let \(N = \max\{N_{1}, N_{2} \}\). 
+
+
+  \textbf{Exercise 2.7.1}
+  \begin{enumerate}[(a)]
+  \item
+  \item It is easily seen that
+    \[s_{2} \leq s_{4} \leq s_{6} \leq \ldots \leq s_{2k} \ldots \leq \ldots s_{2k - 1} \leq \ldots \leq s_{5} \leq s_{3} \leq s_{1}\]
+    So let \(I_{n} = [s_{2k}, s_{2k - 1}]\). 
+  \end{enumerate}
+  
+  \textbf{Exercise 2.7.4}
+  \begin{enumerate}
+  \item Let \(x_{n} = 1 / n\) and \(y_{n} = 1 / n\). Then \(\sum x_{n} y_{n}\)
+    converges by Corollary 2.4.7. 
+  \item By Corollary 2.4.7, \(a_{k} = \sum_{i = 1}^{k} 1 / i^{2}\) converges.
+    Since
+    \[\sum_{k = 1}^{n} \frac{\sin k}{k^{2}} \leq \sum_{k = 1}^{n} 1 / k^{2}\]
+    for all \(n\), then \(sum_{n = 1}^{\infty} 1 / n^{2}\) converges as well.
+  \item Impossible by the Caucy Criterion.
+  \item Impossible. Consider the series \(a_{n} = \sum_{i = 1}^{n} (-1)^{i} 1 / n\).
+    By the alternating series test, \((a_{n}\) converges. By Theorem 2.5.2, any
+    subsequences of \((a_{n})\) also converge. Consider the subsequence of \((a_{n})\)
+    \(y_{n} = x_{2n}\) and \(z_{n} = x_{2n - 1}\). It is easily seen that
+    \[y_{n} \leq \sum (-1)^{n} x_{n} \leq z_{n}\). 
+  \end{enumerate}
+  
+
+
+\end{document}

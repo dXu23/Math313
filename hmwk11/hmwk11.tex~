@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\begin{document}
+\textbf{Exercise 5.3.8}
+We want to show that
+\begin{equation*}
+  f'(0) = \lim_{x \rightarrow 0} \frac{f(x) - f(0)}{x - 0}
+\end{equation*}
+exists. Let us define functions \(m(x) = f(x) - f(0)\) and \(n(x) = x\) with \(m\) and \(n\)
+continuous on the same interval that \(f\) is. Then \(m(0) = f(0) - f(0) = 0\) and
+\(n(0) = 0\). It is evident that
+\begin{equation*}
+  f'(0) = \lim_{x \rightarrow 0} \frac{m(x)}{n(x)}
+\end{equation*}
+and
+\begin{IEEEeqnarray*}{r C l"s}
+  \lim_{x \rightarrow 0} \frac{m'(x)}{n'(x)} & = & \lim_{x \rightarrow 0} \frac{f'(0)}{1} \\
+  & = & \lim_{x \rightarrow 0} f'(0) \\
+  & = & L & this is given
+\end{IEEEeqnarray*}
+
+By L'Hospital's Rule,
+\begin{equation*}
+  \lim_{x \rightarrow 0} \frac{m(x)}{n(x)}  = L
+\end{equation*}
+
+and since
+\begin{equation*}
+  f'(0) = \lim_{x \rightarrow 0} \frac{m(x)}{n(x)} \\
+\end{equation*}
+
+\(f'(0) = L\). 
+
+\textbf{5.3.12}
+From problem 5.2.6, we know that
+\begin{equation*}
+  f'(a) & = & \lim_{h \rightarrow 0} \frac{f(a + h) - 2 \cdot f(a) + f(a - h)}{h^{2}}
+\end{equation*}
+so
+\begin{equation*}
+  \forall \epsilon > 0 \exits \delta \left| h - 0 \right| < \delta \implies \left| \frac{f'(a + h) - f'(a - h)}{2h} - L \right| < \epsilon
+\end{equation*}
+
+By triangle inequality,
+\begin{equation*}
+
+
+
+\end{document}

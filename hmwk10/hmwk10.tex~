@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\begin{document}
+\textbf{Exercise 5.2.3}
+\begin{enumerate}[(a)]
+\item
+  \begin{IEEEeqnarray*}{r C l}
+    h'(c) & = & \lim_{x \rightarrow c} \frac{h(c) - h(x)}{c - x} \\
+    & = & \lim_{x \rightarrow c} \frac{\dfrac{1}{c} - \dfrac{1}{x}}{c - x} \\
+    & = & \lim_{x \rightarrow c} \frac{\dfrac{x - c}{cx}}{c - x} \\
+    & = & \lim_{x \rightarrow c} - \frac{c - x}{cx} \cdot \frac{1}{c - x} \\
+    & = & \lim_{x \rightarrow c} \frac{1}{cx} \\
+    & = & \frac{1}{c^{2}}
+  \end{IEEEeqnarray*}
+\item
+
+
+\item
+  \begin{IEEEeqnarray*}{r C l}
+    (f/g)'(c) & = & \lim_{x \rightarrow c} \frac{(f / g) (x) - (f / g) (c)}{x - c} \\
+    & = & \lim_{x \rightarrow c} \frac{\dfrac{f(x)}{g(x)} - \dfrac{f(c)}{g(c)}}{x - c} \\
+    & = & \lim_{x \rightarrow c} \frac{\dfrac{f(x) \cdot g(c)}{g(x) \cdot g(c)} - \dfrac{f(c) \cdot g(x)}{g(c) \cdot g(x)}}{x - c} \\
+    & = & \lim_{x \rightarrow c} \frac{1}{x - c} \cdot \frac{1}{g(x) \cdot g(c)} \cdot \left(f(x) \cdot g(c) - f(c) \cdot g(x) \right) \\
+    & = & \lim_{x \rightarrow c} \frac{1}{x - c} \cdot \frac{1}{g(x) \cdot g(c)} \cdot \left(f(x) \cdot g(c) + f(c) \cdot g(c) - f(c) \cdot g(c) - f(c) \cdot g(x) \right) \\
+    & = & \lim_{x \rightarrow c} \frac{1}{g(x) \cdot g(c)}
+    \cdot \left(\frac{f(x) \cdot g(c) - f(c) \cdot g(c)}{x - c} - \frac{g(x) \cdot f(c) - g(c) \cdot f(c)}{x - c}\right) \\
+    & = & \lim_{x \rightarrow c} \frac{g(c) \cdot f'(c) - f(c) \cdot g'(c)}{[g(c)]^{2}}
+  \end{IEEEeqnarray*}
+\end{enumerate}
+
+\textbf{Exercise 5.2.7}
+\begin{enumerate}[(a)]
+  \item 
+\end{enumerate}
+  
+
+\end{document}

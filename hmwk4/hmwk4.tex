@@ -3,7 +3,10 @@
 \usepackage{amssymb}
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{enumerate}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 4}
 \begin{document}
+\maketitle
 \textbf{Problem 2.3.4}
 \begin{enumerate}[(a)]
 \item
@@ -54,7 +57,19 @@
   \(a_{n}\) is convergent.
 \end{enumerate}
 
-\textbf{Problem 2.3.11}
+\textbf{Problem 2.3.11} Seeing that \(x_{n}\) is convergent, we know by \textbf{Theorem 2.5.2}
+that \(x_{n}\) is also bounded. So there exists a \(M\) such that for all \(x_{n}\), \(x_{n} \leq M\).
+Even though \(M\) may be equal to some \(x_{n}\), we can just choose a \(M\) slightly greater than
+the previous one. 
+We can then add up all of the elements in the sequence from \(x_{1}\) to \(x_{n}\), and they will
+all be less than \(n \cdot M\).
+\begin{IEEEeqnarray*}{r C l}
+  x_{1} + x_{2} + \ldots + x_{n} & < & n M \\
+  x_{1} + x_{2} + \ldots + x_{n} - n L & < & n M - n L \\
+  \frac{x_{1} + x_{2} + \ldots + x_{n}}{n} - L & < & M - L \\
+  \left| y_{n} - L \right| & < & M - L
+\end{IEEEeqnarray*}
+Then, we just use \(M - L\) as \(\epsilon\). 
 
 \textbf{Problem 2.4.3}
 We first show that the limit of the sequence exists using the monotone convergence theorem.
@@ -74,6 +89,7 @@ So
   \sqrt{2 + x_{k + 1}} & > & \sqrt{2 + x_{k}} \\
   x_{k + 1} & > & x_{k}
 \end{IEEEeqnarray*}
+
 
 Now that we have show that \((x_{n}\) is monotone, we must now show that
 it is bounded. We show that \(x_{k} < 16\). We first consider the base case.
@@ -133,6 +149,16 @@ Then
       x_{n} - \frac{1}{2} \left(x_{n} + \frac{2}{x_{n}} \right) & \geq & 0 \\
       x_{n} - x_{n + 1} & \geq & 0 
     \end{IEEEeqnarray*}
+    Now we have to how that \(\lim x_{n} = \sqrt{2}\). We proceed in a fashion
+    similar to the last problem. We let \(y_{n} = x_{n + 1}\), which will converge
+    to the same limit \(y\) as \(x_{n}\). Then
+    \begin{IEEEeqnarray*}{r C l}
+      y & = & \frac{1}{2} \left(y + \frac{2}{y}\right) \\
+      2y & = & y + \frac{2}{y} \\
+      2y^{2} & = & y^{2} + 2 \\
+      y^{2} & = & 2 \\
+      y & = & \sqrt{2}
+      \end{IEEEeqnarray*}
   \item Let \(x_{1} = c\) and define
     \[x_{n + 1} = \frac{x_{n} + \frac{x_{n}}{c}}{2}\]
   \end{enumerate}
@@ -152,7 +178,10 @@ Then
 
   \item Define
     \[x_{n} = \frac{1}{2} + \frac{1}{2} (-1)^{k} \frac{k}{k + 1}\]
-  \item
+  \item In Theorem 1.5.6, we saw that the rational numbers were countable, meaning
+    that there exists a bijection from the natural numbers to the rational numbers.
+    Such a bijection would contain a subsequence that converges to all numbers in
+    the sequence \(\{1, 1/2, 1/3, 1/4, 1/5, \ldots\}\)
   \item Impossible. Such a sequence would contain a subsequence that converges to
     zero, since the sequence \(x_{n} = 1 / n\) itself converges to zero, which is
     a point outside of the set \(\{1, 1/2, 1/3, 1/4, 1/5, \ldots\}\). 
@@ -161,14 +190,15 @@ Then
   \textbf{Exercise 2.5.2}
   \begin{enumerate}[(a)]
   \item True. Define a proper subsequence \((y_{n})\) of \((x_{n})\) such that
-    \(y_{n} = x_{n + 1}\).
+    \(y_{n} = x_{n + 1}\). It can be easily seen that if \(y_{n}\) converges, then
+    so will \(x_{n}\)
   \item True. Consider the contrapositive of the statement, if \((x_{n})\)
     converges, then \(x_{n}\) contains a convergent subsequence. Since \(x_{n}\)
     is a subsequence of itself, then \(x_{n}\) will always have a convergent
     subsequence. Since the contrapositive of the statement is true, the statement
     is true.
   \item True.
-    \item False. 
+    \item True. 
    
   \end{enumerate}
   

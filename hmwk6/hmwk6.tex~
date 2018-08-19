@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{enumerate}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 6}
+\begin{document}
+\maketitle
+\begin{enumerate}
+
+  \item Since any real number squared is greater than zero, then for
+    any two real number \(x\) and \(y\), \(0 \leq \left(x^{2} - y^{2} \right)^{2}\).
+    Then
+    \begin{IEEEeqnarray*}{r C l}
+      0 & \leq & \left(x^{2} - y^{2} \right)^{2} \\
+      0 & \leq & \frac{\left(x^{2} - y^{2} \right)^{2}}{4} \\
+      0 & \leq & \frac{x^{4} - 2x^{2} y^{2} +  y^{2}}{4} \\
+      \frac{4x^{2} y^{2}}{4} & \leq & \frac{x^{4} + 2x^{2} y^{2} +  y^{2}}{4} \\
+      x^{2} y^{2} & \leq & \frac{x^{4} + 2x^{2} y^{2} +  y^{2}}{4} \\
+      \sqrt{x^{2} y^{2}} & \leq & \sqrt{\frac{x^{4} + 2x^{2} y^{2} +  y^{2}}{4}} \\
+      \left| xy \right| & \leq & \frac{x^{2} + y^{2}}{2}
+    \end{IEEEeqnarray*}
+    Now we can apply this to our proof. So
+    \begin{IEEEeqnarray*}{r C l}
+      \left| a_{n} b_{n} \right| & \leq & \frac{a_{n}^{2} + b_{n}^{2}}{2} \\
+      \sum_{n = 0}^{\infty} \left| a_{n} b_{n} \right| & \leq & \sum_{n = 0}^{\infty} \frac{a_{n}^{2} + b_{n}^{2}}{2} \\
+      \sum_{n = 0}^{\infty} \left| a_{n} b_{n} \right| & \leq & \frac{1}{2} \sum_{n = 0}^{\infty} a_{n}^{2} + b_{n}^{2} \\
+      \sum_{n = 0}^{\infty} \left| a_{n} b_{n} \right| & \leq & \frac{1}{2} \left( \sum_{n = 0}^{\infty} a_{n}^{2} + \sum_{n = 0}^{\infty} b_{n}^{2} \right)
+    \end{IEEEeqnarray*}
+    Therefore, \(\sum_{n = 0}^{n = \infty} \left| a_{n} \cdot b_{n} \right| \) absolutely converge
+    if \(\sum_{n = 0} a_{n}^{2} < +\infty\) and  \(\sum_{n = 0} b_{n}^{2} < +\infty\)
+\item
+  \begin{enumerate}
+  \item We can use the Ratio Test. So
+    \begin{IEEEeqnarray*}{r C l"s}
+      \lim \left| \dfrac{\dfrac{(n + 1)^{n + 1}}{2^{n + 1} \cdot ((n + 1)!)^{2}}}{\dfrac{n^{n}}{2^{n} \cdot (n!)^{2}}} \right| & = &
+      \lim \left| \frac{(n + 1)^{n + 1}}{2^{n + 1} \cdot ((n + 1)!)^{2}} \cdot \frac{2^{n} \cdot (n!)^{2}}{n^{n}} \right| \\
+      & = & \lim \left| \frac{(n + 1)^{n + 1}}{2 \cdot (n + 1)^{2} \cdot n^{n}} \right| \\
+      & = & \lim \left| \frac{(n + 1)^{n - 1}}{ 2 \cdot n^{n}} \right| \\
+      & = & 0
+    \end{IEEEeqnarray*}
+    Since the ratio is 0, which is less than 1, the sum converges. Since \(n\) is a natural
+    number, and there are no operations in the sum that could result in a negative number,
+    the sum is absolutely convergent as well.
+  \item It can be shown that the sequence \(a_{n} = 1 / (8n \cdot \log n)\) is less than
+    \(1 / (n^{1 / n} \cdot (n + 1) \cdot \log (5n))\). Since \(a_{n}\) diverges, we know that
+    the this sum must diverge as well. 
+  \item Let \(a_{n} = 1 / \log( 2n + 1)\). Then this sum can be written as
+    \[\sum_{n = 1}^{\infty} \frac{(-1)^{n}}{\log(2n + 1)} = \sum_{n = 1}^{\infty} (-1)^{n} a_{n}\]
+    
+
+  We can apply the Alternating Series test. First, we show that \(a_{n} \geq a_{n + 1}\). We
+  consider the base case.
+  \begin{IEEEeqnarray*}{r C l"s}
+    a_{1} & \stackrel{?}{\geq} & a_{2} \\
+    \frac{1}{\log (2 \cdot 1 + 1)} & \stackrel{?}{\geq} & \frac{1}{\log (2 \cdot 2 + 1)} \\
+    \frac{1}{\log (3)} & \stackrel{?}{\geq} & \frac{1}{\log (5)} \\
+    \log (3) & \stackrel{?}{\leq} & \log (5) \\
+    3 & \leq & 5 & since \(\log\) is an increasing function
+  \end{IEEEeqnarray*}
+  Now that we have established the base case, we must show that \(a_{k} \geq a_{k + 1}\) implies
+  \(a_{k + 1} \geq a_{k + 2}\). So
+  \begin{IEEEeqnarray*}{r C l}
+    \frac{1}{\log (2 \cdot k + 1)} & \geq & \frac{1}{\log (2 \cdot (k + 1) + 1)} \\
+    \log (2 k + 1) & \leq & \log (2 k + 3) \\
+    2k + 1 & \leq & 2k + 3 \\
+    2k + 3 & \leq & 2k + 5 \\
+    2 (k + 1) + 1 & \leq & 2 (k + 2) + 2 \\
+    \log ( 2 (k + 1) + 1) & \leq & \log (2 (k + 2) + 2) \\
+    \frac{1}{\log ( 2 (k + 1) + 1)} & \leq & \frac{1}{\log (2 (k + 2) + 2)} \\
+    \end{IEEEeqnarray*}
+
+    We show that \((a_{n})\) converges to zero. For
+  any arbitrary \(\epsilon > 0\), we pick \(N \geq \frac{e^{1 / \epsilon} - 1}{2}\). Now we must
+  show that for any \(n \geq N\), \(\left| a_{n} - 0 \right| < \epsilon\). If \(n \geq N\), then
+  \begin{IEEEeqnarray*}{r C l}
+    n & \geq & \frac{e^{1 / \epsilon} - 1}{2} \\
+    2n & \geq & e^{1 / \epsilon} - 1 \\
+    2n + 1 & \geq & e^{1 / \epsilon} \\
+    \log (2n + 1) & \geq & \frac{1}{\epsilon} \\
+    \frac{1}{\log (2n + 1)} & \leq & \epsilon \\
+    \left| \frac{1}{\log (2n + 1)} - 0 \right| & \leq & \epsilon
+  \end{IEEEeqnarray*}
+  Therefore, by the Alternating Series Test, this sum must converge. 
+  \end{enumerate}
+\item
+  \begin{enumerate}[(a)]
+  \item We can use the ratio test to find out for which values of \(x\) this
+    series is convergent. So
+    \begin{IEEEeqnarray*}{r C l}
+      \left| \frac{a_{n + 1}}{a_{n}} \right| & = & \left| \frac{\left(-2x \right)^{n + 1}}{n + 1} \cdot \frac{n}{\left(-2x \right)^{n}} \right| \\
+      & = & \left| \frac{n}{ -2x \cdot (n + 1)} \right| 
+    \end{IEEEeqnarray*}
+    Now we have to find which values of \(x\) make the sequence converge to some
+    value less than 1. A little more work shows
+    \begin{IEEEeqnarray*}{r C l}
+      \lim \left| \frac{n}{ -2x \cdot (n + 1)} \right| & = & \frac{1}{2 |x|} \cdot \lim \left(\frac{n}{n + 1} \right)
+    \end{IEEEeqnarray*}
+    It is trivial to show that \(\lim n / (n + 1) = 1\). So if the series is to
+    converge, then
+    \begin{IEEEeqnarray*}{r C l}
+      \frac{1}{2 | x |} & < & 1 \\
+      | x | & > & \frac{1}{2}
+    \end{IEEEeqnarray*}
+    So \(x\) has to be greater than \(1 / 2\) or less than \(- 1 / 2\)
+  \item We can use the Ratio test again for this problem. So
+    \begin{IEEEeqnarray*}{r C l"s}
+      \lim \left| \dfrac{\dfrac{x^{n + 1}}{3^{n + 1} - 2^{n + 1}}}{\dfrac{x^{n}}{3^{n} - 2^{n}}} \right|
+      & = & \lim \left| \frac{x^{n + 1}}{3^{n + 1} - 2^{n + 1}} \cdot \frac{3^{n} - 2^{n}}{x^{n}} \right| \\
+      & = & \lim \left| x \cdot \frac{3^{n} - 2^{n}}{3^{n + 1} - 2^{n + 1}} \right| \\
+      & = & |x| \cdot \lim \left| \frac{3^{n} - 2^{n}}{3^{n + 1} - 2^{n + 1}} \right| \\
+      & = & |x| \cdot \lim \left| \frac{3^{n} - 2^{n}}{3^{n + 1} - 2^{n + 1}} \cdot \dfrac{\dfrac{1}{3^{n}}}{\dfrac{1}{3^{n}}} \right| \\
+      & = & |x| \cdot \lim \left| \frac{1 - \left( \dfrac{2}{3} \right)^{n}}{3 - 2 \cdot \left(\dfrac{2}{3} \right)^{n}} \right| \\
+      & = & |x| \cdot \lim \left| \frac{1 - 0}{3 - 2 \cdot 0} \right| & by \textbf{Example 2.5.3} \\
+      & = & |x| \cdot \frac{1}{3}
+    \end{IEEEeqnarray*}
+    Therefore, \(x < 3\) or \(x > - 3\).
+  \item We apply the Ratio Test once again.
+    \begin{IEEEeqnarray*}{r C l}
+      \lim \left| \frac{\dfrac{x^{2(n + 1)}}{(n + 1)^{3}}}{\dfrac{x^{2n}}{n^{3}}} \right| & = &
+      \lim \left| \frac{x^{2(n + 1)}}{(n + 1)^{3}} \cdot \frac{x^{2n}}{n^{3}} \right| \\
+        & = & x^{2} \cdot \lim \left| \frac{n^{3}}{(n + 1)^{3}} \right| \\
+        & = & x^{2}        
+    \end{IEEEeqnarray*}
+    Therefore, \(x < 1\) and \(x > -1\). 
+    \end{enumerate}
+\item
+  \begin{enumerate}[(a)]
+  \item Since \(\sum_{n = 1}^{\infty} a_{n}\) is a positive convergent series, it must
+  be bounded. So there exists some \(M\) such that
+  \[\sum_{n = 1}^{\infty} a_{n} \leq M\]
+  So
+  \begin{IEEEeqnarray*}{r C l}
+    \sum_{n = 1}^{\infty} a_{n} & \leq & M \\
+    \left(\sum_{n = 1}^{\infty} a_{n}\right)^{2} & \leq & M^{2} \\
+    \sum_{n = 1}^{\infty} a_{n}^{2} \leq \left(\sum_{n = 1}^{\infty} a_{n}\right)^{2} & \leq & M^{2} \\
+  \end{IEEEeqnarray*}
+  Therefore, \(\sum_{n = 1}^{\infty} a_{n}^{2}\) is bounded. We also know that it is monotone
+  since \(a_{n}^{2}\) will always be a positive number or 0. By the Monotone Convergence
+  Theorem, \(\sum_{n = 1}^{\infty} a_{n}^{2}\) converges.
+\item Let \(a_{n} = (-1)^{n + 1} \cdot 1 / \sqrt{n}\). Then \(\sum_{n = 1}^{\infty} a_{n}\)
+  converges since \(a_{n+1} < a_{n}\) and \(a_{n}\) converges to zero. However,
+  \(\sum_{n = 1}^{\infty} a_{n}^{2} = \sum_{n = 1}^{\infty} 1 / n\) does not converge, which was
+  shown in \textbf{Exercise 2.4.5}
+\end{enumerate}
+\end{enumerate}
+\end{document}

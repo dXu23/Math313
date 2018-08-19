@@ -1,0 +1,171 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{enumerate}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 7}
+\begin{document}
+\maketitle
+\textbf{Exercise 3.2.2}
+\begin{enumerate}[(a)]
+  \item
+  The limit points for \(A\) are 1 and -1. To see why, simply let
+  \(a_{n} = A_{2n}\) and \(b_{n} = A_{2n - 1}\), which are sequences contained
+  in \(A\). Then \(a_{n} = 1 + 1 / n\) and \(b_{n} = -1 + 2 / (2 n - 1)\). 
+  We can use the Algebraic limit theorem to show that \(a_{n}\) converges
+  to 1:
+  \begin{IEEEeqnarray*}{r C l"s}
+    \lim \left(1 + \frac{1}{n} \right) & = & \lim (1) + \lim \left(\frac{1}{n}\right) & by (ii) of Theorem 2.3.3 (Algebraic Limit Theorem) \\
+    & = & 1 + 0 \\
+    & = & 1
+  \end{IEEEeqnarray*}
+  We can show that \(b_{n}\) converges to -1 through the definition of the limit.
+  For any arbitrary \(\epsilon > 0\), choose \(N > 1 / \epsilon + 1 / 2\). Then
+  for all \(n \geq N\),
+  \begin{IEEEeqnarray*}{r C l"s}
+    n & > & \frac{1}{\epsilon} + \frac{1}{2} \\
+    2n & > & \frac{2}{\epsilon} + 1 \\
+    2n - 1 & > & \frac{2}{\epsilon} \\
+    \left|\frac{1}{2n - 1} \right| & < & \frac{\epsilon}{2} & since \(n\) and \(\epsilon\) are both positive \\
+    \left|\frac{2}{2n - 1} \right| & < & \epsilon \\
+    \left| -1 + \frac{2}{2n - 1} - (-1)\right| & < & \epsilon \\
+    \left| b_{n} - (-1) \right| & < & \epsilon
+  \end{IEEEeqnarray*}
+  Therefore, \(b_{n}\) converges to -1, so -1 is a limit point of \(A\).
+  The limit points for \(B\) are all real numbers between 1 and 0 inclusive. By
+  \textbf{Theorem 1.4.3}, for every real number \(r\) such that \(0 < r < 1\),
+  there exists a rational number within \(V_{\epsilon}(r)\).
+  
+\item Set \(A\) is neither open nor closed. We choose the element \(2 = (-1)^{2} + (2 / 2)\) from the
+  set \(A\), which we must show does not contain any \(\epsilon\)-neighborhoods that
+  are a subset of \(A\). For 2 to contain a \(\epsilon\)-neighborhood, there must be
+  an element \(a \in A\) such that \(a > 2\). However, it is not to hard to see that
+  there is no such \(a\). Consider the sequences we defined before, \(a_{n}\) and
+  \(b_{n}\). If we defined two sets to contain the elements of \(a_{n}\) and \(b_{n}\),
+  and took the union of those sets, we would get \(A\). So if we can show that \(a_{n}\)
+  does not contain any elements greater than 2 and \(b_{n}\) does not contain any elements
+  greater than 2, then we can conclude that 2 does not have any \(\epsilon\)-neighborhoods
+  that a subset of \(A\). So we assume to the contrary that \(a_{n}\) does contain an
+  element greater than 2. Then for some \(n\), \(1 + 1 / n > 2\). However,
+  \begin{IEEEeqnarray*}{r C l}
+    1 + \frac{1}{n} & > & 2 \\
+    \frac{1}{n} & > & 1 \\
+    n & < & 1
+  \end{IEEEeqnarray*}
+  However, \(n\) must be a natural number, so it cannot be less than 1. Now we assume that
+  \(b_{n}\) contains some element greater than 2. Then there exists some \(n\) such that
+  \(-1 + 2 / (2n - 1) > 2\). However,
+  \begin{IEEEeqnarray*}{r C l}
+    -1 + \frac{2}{2n - 1} & > & 2 \\
+    \frac{2}{2n - 1} & > & 3 \\
+    \frac{2n - 1}{2} & < & \frac{1}{3} \\
+    2n - 1 & < & \frac{2}{3} \\
+    2n & < & \frac{5}{3} \\
+    n & < & \frac{5}{6}
+  \end{IEEEeqnarray*}
+  As stated before, \(n\) must be a natural number, so \(n\) cannot be less
+  than \(5 / 6\). Thus, \(b_{n}\) does not contain an element greater than 2.
+  So, if neither \(a_{n}\) and \(b_{n}\) does not contain an element greater
+  than 2, then \(A\) does not contain an element greater than 2; therefore,
+  there is no \(\epsilon\) neighborhood for 2 that is a subset of \(A\) and
+  \(A\) is not open.
+
+  To show that \(A\) is closed, we just have to show that there is a limit point
+  that \(A\) does not contain. We consider -1. In order for \(A\) to contain
+  -1, there must be an element in \(A\) for which \(-1 = (-1)^{n} + 2 / n\).
+  However,
+  \begin{IEEEeqnarray*}{r C l}
+    (-1)^{n} + \frac{2}{n} & = & -1 \\
+    \frac{2}{n} & = & -1 - (-1)^{n} \\
+    \frac{2}{n} & = & -2 \textrm{ or } 0
+  \end{IEEEeqnarray*}
+  Then \(n\) be equal to -1. However, \(n\) cannot be equal to -1, since \(n\)
+  must be a natural number. And \(2 / n\) is never equal to 0. Therefore,
+  the set \(A\) is closed.
+
+  The set \(B\) is neither open nor closed. Any element \(b \in B\) will have
+  a \(\epsilon\)-neighborhood containing a real number not part of the rational
+  numbers, so for any \(V_{\epsilon}(b)\), \(V_{\epsilon}(b) \not\subset B\). Therefore,
+  \(B\) is not closed. \(B\) is also not closed, since it does not contain its limit
+  point 1. 
+
+\item \(A\) does contain isolated points. Simply choose \(a \in A\) such that \(a \neq 1\)
+  and \(a \neq -1\). \(B\), on the other hand, does not contain any isolated points.
+  Since the limit points of \(B\) are all reals between 0 and 1 inclusive, \(B\) contains
+  all of its limit points.
+  
+\end{enumerate}
+\textbf{Exercise 3.2.3}
+\begin{enumerate}
+\item Open but not closed. By \textbf{Theorem 3.2.5}, \(e\) is a limit point of \(\mathbb{Q}\)
+  since the sequence \(a_{n} = (1 + (1 / n))^{n}\) is contained in \(\mathbb{Q}\)
+  due to the fact that rational numbers are closed under multiplication and
+  addition. \(a_{n}\) converges to \(e\) which is an irrational number. 
+  
+\item Closed but not open. Choose any element \(n \in \mathbb{N}\). Then any \(V_{\epsilon} (n)\)
+  will contain a number that is not in \(\mathbb{N}\). 
+
+\item Open but not closed. 0 is most certainly a limit point of \(\{x \in \mathbb{R} : x \neq 0\}\),
+  but is not in the set.
+  
+\item Not open and not closed. 1 is in the set, yet there is no \(\epsilon\)-neighborhood
+  around 1 that is a subset of the set, since the \(\epsilon\)-neighborhood that will
+  contain a real number greater than 1 but less than \(5 / 4\). Such a number will not be in
+  the set, so for any \(\epsilon\), the \(\epsilon\)-neighborhood will not be a subset of the
+  set. \(\pi^{2} / 6\) is a limit point of the set, yet the set does not contain \(\pi^{2} / 6\). 
+
+\item Not open but closed. 1 is in the set, yet there is no \(\epsilon\)-neighborhood
+  around 1 that is a subset of the set, since the \(\epsilon\)-neighborhood that will
+  contain a real number greater than 1 but less than \(3 / 2\). Such a number will not be in
+  the set. 
+
+\end{enumerate}
+\textbf{Exercise 3.2.6}
+\begin{enumerate}
+\item True. For any point in 
+\item True. Since all closed intervals are closed sets, the Nested Interval Property
+  still holds. 
+\item True
+
+  
+\end{enumerate}
+
+\textbf{Exercise 3.3.1}
+By \textbf{Theorem 3.3.4}, any compact set will be closed and bounded. By the Axiom
+of Completeness, any set that is bounded and is  a subset of the real numbers will have a least
+upper bound and a least upper bound.
+
+\textbf{Exercise 3.3.2}
+\begin{enumerate}[(a)]
+\item Not compact. Let \(a_{n} = n\), which we know to not contain any convergent subsequences. 
+\item Compact.
+\item
+\item Not compact. We showed that this set was not closed since it does not contain
+  the limit point \(\pi^{2} / 6\).
+  \item Compact
+\end{enumerate}
+
+\textbf{Exercise 3.3.5}
+\begin{enumerate}[(a)]
+\item True. We consider \(n\) compact sets. By \textbf{Theorem 3.3.4}, any compact set is closed and bounded. By
+  \textbf{Theorem 3.2.14}, the intersection of our compact sets will be closed.
+  Since compact sets are bounded, there must exist \(M_{1}, M_{2}, \ldots M_{n}\)
+  that are bounds on our \(n\) compact sets. For the intersection, we simply select
+  bound \(M = \max\{M_{1}, M_{2}, \ldots M_{n}\}\). Since the intersection is bounded
+  and closed, then it must be compact.
+  
+  \item True. We consider \(n\) compact sets. By \textbf{Theorem 3.3.4}, any compact set is closed and bounded. By
+  \textbf{Theorem 3.2.14}, the union of our compact sets will be closed.
+  Since compact sets are bounded, there must exist \(M_{1}, M_{2}, \ldots M_{n}\)
+  that are bounds on our \(n\) compact sets. For the intersection, we simply select
+  bound \(M = \max\{M_{1}, M_{2}, \ldots M_{n}\}\). Since the union is bounded
+  and closed, then it must be compact.
+
+\item False. Let \(A = (0, 1]\) and \(K = [0, 1]\). Then \(A \cap K = (0, 1]\),
+    which is not compact since \(A \cap K\) is not closed.
+
+    \item True by Nested Interval property. 
+  \end{enumerate}
+
+\end{document}

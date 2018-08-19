@@ -1,0 +1,182 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.1.15)  2 MAR 2018 07:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\nonstopmode\input hmwk5.tex
+(./hmwk5.tex (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks14
+)
+(/usr/share/texmf-dist/tex/latex/IEEEtran/IEEEtrantools.sty
+Package: IEEEtrantools 2015/08/26 V1.5 by Michael Shell
+
+-- See the "IEEEtrantools_doc.txt" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/tools/
+\@IEEEtrantmpdimenA=\dimen103
+\@IEEEtrantmpdimenB=\dimen104
+\@IEEEtrantmpdimenC=\dimen105
+\@IEEEtrantmpcountA=\count87
+\@IEEEtrantmpcountB=\count88
+\@IEEEtrantmpcountC=\count89
+\@IEEEtrantmptoksA=\toks15
+\IEEEnormaljot=\dimen106
+\IEEEquantizedlength=\dimen107
+\IEEEquantizedlengthdiff=\dimen108
+\IEEEquantizedtextheightdiff=\dimen109
+\IEEEilabelindentA=\dimen110
+\IEEEilabelindentB=\dimen111
+\IEEEilabelindent=\dimen112
+\IEEEelabelindent=\dimen113
+\IEEEdlabelindent=\dimen114
+\IEEElabelindent=\dimen115
+\IEEEiednormlabelsep=\dimen116
+\IEEEiedmathlabelsep=\dimen117
+\IEEEiedtopsep=\skip43
+\c@IEEEsubequation=\count90
+\@IEEEeqnnumcols=\count91
+\@IEEEeqncolcnt=\count92
+\@IEEEsubeqnnumrollback=\count93
+\IEEEPARstartletwidth=\dimen118
+) (./hmwk5.aux)
+\openout1 = `hmwk5.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 10.
+
+Overfull \hbox (51.88899pt too wide) in alignment at lines 32--38
+ [] [] [] [] [][]
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ..._{n} \leq \sum (-1)^{n} x_{n} \leq z_{n}\)
+                                                  .
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \end{enumerate} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64   \end{enumerate}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64   \end{enumerate}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64   \end{enumerate}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.64   \end{enumerate}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.64   \end{enumerate}
+                      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[2] (./hmwk5.aux) ) 
+Here is how much of TeX's memory you used:
+ 671 strings out of 492985
+ 11212 string characters out of 6138638
+ 71466 words of memory out of 5000000
+ 4302 multiletter control sequences out of 15000+600000
+ 6983 words of font info for 25 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,7n,19p,251b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb>
+Output written on hmwk5.pdf (2 pages, 105417 bytes).
+PDF statistics:
+ 51 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

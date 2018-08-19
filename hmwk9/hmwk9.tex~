@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\begin{document}
+\textbf{Exercise 4.4.7}
+For any \(\epsilon\) given, we simply choose \(\delta = \epsilon \cdot \left|\sqrt{x} + \sqrt{x'}\right|\).
+Then
+\begin{IEEEeqnarray*}{r C l}
+  \left| x - x' \right| & < & \epsilon \cdot \left|\sqrt{x} + \sqrt{x'} \right| \\
+  \frac{ \left|x - x' \right| }{ \left| \sqrt{x} + \sqrt{x'} \right| } & < & \epsilon \\
+  \left| \sqrt{x} - \sqrt{x'} \right| & < & \epsilon
+  \end{IEEEeqnarray*}
+\textbf{Exercise 4.4.9}
+\begin{enumerate}[(a)]
+\item
+For any \(\epsilon\) given, we simply choose \(\delta = \epsilon / M\). Then
+\begin{IEEEeqnarray*}{r C l}
+  \left| x - y \right| & < & \frac{\epsilon}{M} \\
+  M \cdot \left| x - y \right| & < & \epsilon
+\end{IEEEeqnarray*}
+We know that
+\begin{IEEEeqnarray*}{r C l}
+  \left| \frac{f(x) - f(y)}{x - y} \right| & \leq & M \\
+  \left| f(x) - f(y) \right| & \leq & M \cdot \left| x - y \right|
+\end{IEEEeqnarray*}
+so
+\begin{IEEEeqnarray*}{r C l}
+  \left| f(x) - f(y) \right| & \leq & M \cdot \left| x - y \right| < \epsilon \\
+  \left| f(x) - f(y) \right| & < & \epsilon
+\end{IEEEeqnarray*}
+
+\item False. The function \(\sqrt{x}\) is a counterexample. It is continuous on
+  the compact set \([0, 1]\), yet it is not a Lipschitz function. For any bound \(M\),
+  we can choose the pair of numbers \((0, 1 / M^{2})\) such that 
+
+\end{enumerate}
+\textbf{Exercise 4.4.13}
+For any \(\delta > 0\), we know that there exists \(N \in \mathbb{N}\) such that for any
+\(m \geq N\) and \(n \geq N\), \(\left| x_{n} - x_{m} \right| < \delta\) for any Cauchy
+sequence \(x_{n} \subset A\). By the definition of a uniformly continuous function, this
+implies that \(\left| f\left( x_{n} \right) - f \left( x_{m} \right) \right| < \epsilon\),
+which meets the definition of a Cauchy sequence.
+
+\textbf{Exercise 4.5.2}
+\begin{enumerate}[(a)]
+\item Impossible. 
+\item Impossible. 
+\item Impossible. 
+  \item Impossible. 
+  
+\end{enumerate}
+
+\textbf{Exercise 4.5.8}
+We proceed by contradiction; we assume that \(f^{-1}\) is actually not
+continuous. Then by \textbf{Corollary 4.3.3}, there exists a sequence
+\((x_{n})\) in the domain of \(f^{-1}\) and a number \(c\) in the domain
+of \(f^{-1}\), with \((x_{n}) \rightarrow c\) but \(f^{-1} (x_{n})\) does not
+converge to \(f^{-1} (c)\). By \textbf{Theorem 4.3.2}, however, a characteristic
+of our continuous function \(f\) is that
+\(f^{-1} (x_{n}) \rightarrow f^{-1} (c) \implies (x_{n}) \rightarrow c\).
+Since \(f^{-1} (x_{n}) \rightarrow f^{-1} (c)\) is false by \textbf{Corollary 4.3.3},
+but \(f^{-1} (x_{n})\) is true, our implication is false; however, we know that
+\(f\) is continuous. Thus, we must conclude that \(f^{-1}\) is also continuous. 
+
+\end{document}

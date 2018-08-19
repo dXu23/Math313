@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{enumerate}
+\author{Daniel Xu}
+\title{MATH 313 HMWK 11}
+\begin{document}
+\maketitle
+\textbf{Exercise 5.3.8}
+We want to show that
+\begin{equation*}
+  f'(0) = \lim_{x \rightarrow 0} \frac{f(x) - f(0)}{x - 0}
+\end{equation*}
+exists. Let us define functions \(m(x) = f(x) - f(0)\) and \(n(x) = x\) with \(m\) and \(n\)
+continuous on the same interval that \(f\) is. Then \(m(0) = f(0) - f(0) = 0\) and
+\(n(0) = 0\). It is evident that
+\begin{equation*}
+  f'(0) = \lim_{x \rightarrow 0} \frac{m(x)}{n(x)}
+\end{equation*}
+and
+\begin{IEEEeqnarray*}{r C l"s}
+  \lim_{x \rightarrow 0} \frac{m'(x)}{n'(x)} & = & \lim_{x \rightarrow 0} \frac{f'(0)}{1} \\
+  & = & \lim_{x \rightarrow 0} f'(0) \\
+  & = & L & this is given
+\end{IEEEeqnarray*}
+
+By L'Hospital's Rule,
+\begin{equation*}
+  \lim_{x \rightarrow 0} \frac{m(x)}{n(x)}  = L
+\end{equation*}
+
+and since
+\begin{equation*}
+  f'(0) = \lim_{x \rightarrow 0} \frac{m(x)}{n(x)} \\
+\end{equation*}
+
+\(f'(0) = L\). 
+
+\textbf{Exercise 5.3.11}
+\begin{enumerate}[(a)]
+\item Say that a sequence \(x_{n} \rightarrow a\), with \(x_{n} > 0\). Then
+  \begin{IEEEeqnarray*}{r C l"s}
+    \frac{f \left( x_{n} \right)}{g \left( x_{n} \right)} & = & \frac{f \left( x_{n} \right) - 0}{g \left( x_{n} \right) - 0} \\
+    & = & \frac{f \left( x_{n} \right) - f(a)}{g \left( x_{n} \right) - g(a)} \\
+    & = & \frac{f' \left(c_{n} \right)}{g' \left( c_{n} \right)} \\
+    & \rightarrow & L & by definition of limit
+  \end{IEEEeqnarray*}
+\item No, it does not necessarily follow. Let
+  \begin{equation*}
+    f(x) = \frac{1}{6} x^{5} \quad \textrm{and} \quad g(x) = \frac{1}{2} x^{2} - 3x
+  \end{equation*}
+  Then
+  \begin{IEEEeqnarray*}{r C l}
+    \lim_{x \rightarrow 3} \frac{f(x)}{g(x)} & = & \lim_{x \rightarrow 3} \frac{\dfrac{1}{6} x^{5}}{\dfrac{1}{2} x^{2} - 3x} \\
+    & = & \frac{\dfrac{243}{6}}{-\dfrac{9}{2}} \\
+    & = & \frac{243}{6} \cdot - \frac{2}{9} \\
+    & = & -9
+  \end{IEEEeqnarray*}
+  However,
+  \begin{IEEEeqnarray*}{r C l}
+    \lim_{x \rightarrow 3} \frac{f'(x)}{g'(x)} & = & \lim_{x \rightarrow 3} \frac{x^{5}}{x - 3} \\
+    & = & \infty
+  \end{IEEEeqnarray*}
+  
+\end{enumerate}
+
+\textbf{Exercise 6.2.1}
+\begin{enumerate}[(a)]
+\item
+  \begin{IEEEeqnarray*}{r C l}
+    \lim_{n \rightarrow \infty} g_{n} (x) & = & \lim_{n \rightarrow \infty} \frac{nx}{1 + nx^{2}} \\
+    & = & \lim_{n \rightarrow \infty} \frac{nx}{n \cdot \left(\dfrac{1}{n} + x^{2} \right)} \\
+    & = & \lim_{n \rightarrow \infty} \frac{x}{\dfrac{1}{n} + x^{2}} \\
+    & = & \frac{1}{x}
+  \end{IEEEeqnarray*}
+\item Yes. For any \(c \in (0, 1)\), given any arbitrary \(\epsilon > 0\), we can just choose
+  \(\delta = |c| \cdot \epsilon \). Then, since
+  \begin{equation*}
+    \left| \frac{x - c}{x} \right| < \left| x - c \right|
+  \end{equation*}
+  then
+  \begin{equation*}
+    \left|\frac{ c - x }{cx} \right| < \epsilon
+    \end{equation*}
+\item Yes. See above. 
+\item Yes. See above.
+\end{enumerate}
+
+  
+
+\end{document}

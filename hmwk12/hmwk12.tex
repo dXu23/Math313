@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\begin{document}
+\textbf{6.2.3}
+\begin{enumerate}[(a)]
+\item In the case of \(g_{n}\), for \(c \in (0, 1)\)
+  \begin{IEEEeqnarray*}{r C l"s}
+    \lim g_{n} & = & \lim \frac{c}{1 + c^{n}} \\
+    & = & \frac{\lim c}{\lim \left(1 + c^{n} \right)} \\
+    & = & \frac{\lim c}{\lim 1 + \lim c^{n}} \\
+    & = & c & Since \(0 < c < 1\), \(\lim c = \infty\), leaving only 1 in the denominator
+  \end{IEEEeqnarray*}
+  For \(c = 1\),
+  \begin{IEEEeqnarray*}{r C l}
+    g_{n}(1) & = & \frac{1}{1 + 1^{n}} \\
+    & = & \frac{1}{2}
+  \end{IEEEeqnarray*}
+  So \(g_{n}\) converges to the function
+  \[g(x) =
+  \begin{cases}
+    x & 0 \leq x < 1 \\
+    \frac{1}{2} & x = 1 \\
+    0 & x \geq 1
+  \end{cases}\]
+
+  In the case of \(h_{n}\),
+  \[h(x) =
+  \begin{cases}
+    0 & x = 0 \\
+    1 & x > 0
+    \]
+  
+\item The convergence of \(g_{n}\) cannot be uniform on \([0, \infty]\) because
+  the limit is not uniform even though \(g_{n}\) is. The same holds for \(h_{n}\)
+
+\item \(g_{n}\) is uniform over the interval \((0, 1)\) and \(h_{n}\) is uniform
+  on the interval \((1, \infty)\)
+\end{enumerate}
+
+  \textbf{6.2.6}
+  \begin{enumerate}
+  \item
+  \item
+  \item All of the functions in the sequence of functions \(f_{n}(x) = x^{n}\)
+    have 0 discontinuities over the interval \([0, 1]\), yet its pointwise convergence,
+    \[f(x) =
+    \begin{cases}
+      0 & 0 \leq x < 1 \\
+      1 & x = 1\]
+    \end{enumerate}
+    has one discontinuity. 
+\textbf{6.3.2}
+\begin{enumerate}
+  \item The pointwise limit of \((h_{n})\) is \(h(x) = \left| x \right| \). 
+  \end{enumerate}
+\textbf{6.4.3}
+\textbf{6.5.2}
+\begin{enumerate}[(a)]
+\item Let \(a_{n} = (-1)^{n} / n! \). 
+\end{enumerate}
+
+\textbf{6.5.4}
+\end{document}

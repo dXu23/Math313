@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{Daniel Xu}
+\title{MATH 215 HMWK}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item
+  \begin{enumerate}
+  \item We assume that \(\sqrt{3}\) is rational. By definition, it can be
+    written in the form \(p / q\), where \(p\) and \(q\) are natural numbers.
+    Let \(p / q\) be fully reduced.
+    \begin{IEEEeqnarray*}{r C l"s}
+      \sqrt{3} & = & \frac{p}{q} \\
+      \sqrt{3} \cdot q & = & p \\
+      \left( \sqrt{3} \cdot q \right)^{2} & = & p^{2} \\
+      3  q^{2} & = & p^{2} & \(p\) must contain the factor 3. Let \(p = 3k, k \in \mathbb{N}\) \\
+      3  p^{2} & = & (3k)^{2} \\
+      3  p^{2} & = & 9k^{2} \\
+      p^{2} & = & 3k^{2}
+    \end{IEEEeqnarray*}
+    Since \(3 \, | \, q^{2}\), then \(3 \, | \, q\). Also, \(3 \, | \, p\). This means that \(p / q\)
+    can be reduced, but this contradicts our original assumption that
+    \(p / q\) was fully reduced. Therefore, \(\sqrt{3}\) is not rational.
+    A similar argument does work to show that \(\sqrt{6}\) is irrational.
+
+  \item
+      \begin{IEEEeqnarray*}{r C l"s}
+      \sqrt{4} & = & \frac{p}{q} \\
+      \sqrt{4} \cdot q & = & p \\
+      \left( \sqrt{4} \cdot q \right)^{2} & = & p^{2} \\
+      4  q^{2} & = & p^{2} & \(p\) can contain the factor 2. 
+      \end{IEEEeqnarray*}
+      The proof breaks down when we try to claim that \(p = 4k\), where
+      \(k \in \mathbb{N}\). It might be possible that \(p = 2k\) since 4
+      is a perfect square. 
+    
+  \end{enumerate}
+\item We assume that \(r\) is rational. Then, it can be written as \(p / q\), where
+  \(p\) and \(q\) are natural numbers. 
+  \begin{IEEEeqnarray*}{r C l}
+    2^{r} & = & 3 \\
+    2^{p / q} & = & 3 \\
+    \left(2 ^{p / q} \right)^{q} & = & 3^{q} \\
+    2^{p} & = & 3^{q}
+  \end{IEEEeqnarray*}
+  Since \(p\) and \(q\) are natural numbers, then \(2^{p}\) must contain a factor of 3
+  and \(3^{q}\) must contain a factor of 2. However, \(2^{p}\) does not contain 3 and
+  \(3^{q}\) does not contain 2, so we can conclude that \(r\) is not a rational number.
+\item
+  \begin{enumerate}
+  \item true
+  \item true
+  \item false. Let \(A = \{1\}\), \(B = \emptyset\), and \(C = \{1, 2\}\). Then
+    \begin{IEEEeqnarray*}{r C l}
+      A \cap (B \cup C) & = & \{1\} \\
+      (A \cap B) \cup C & = & \{1, 2\} \\
+      \{1\} \neq \{1, 2\}
+    \end{IEEEeqnarray*}
+    
+  \item true
+  \item true
+  \end{enumerate}
+\item Let \(A_{1}\) contain 1 and every multiple of 2. Then, let \(A_{2}\) contain every multiple
+  of 3 not divisible by 2. Let \(A_{3}\) contain every multiple of 5 not divisible by 2 or 3. Let
+  \(A_{k}\) contain every multiple of the \(k\)th prime number not divisible by the previous \(k - 1\)
+  prime numbers. Since there are an infinite number of prime numbers, there are an infinite number
+  of sets. Also, there are an infinite number of multiples of prime numbers, so each set will have
+  an infinite number of elements. None of the infinites sets will intersect since all of their elements
+  are relatively prime to each other. 
+
+\setcounter{enumi}{9}
+\item
+  \begin{enumerate}
+  \item false. Let \(a = 1\), \(b = -2\), and \(c = 8\). \(1 < -2 + 8\), yet \(1 \nless -2\).
+  \item false. See above.
+  \item false. See above.
+  \end{enumerate}
+
+\setcounter{enumi}{11}
+\item
+  \begin{enumerate}
+  \item Base Case: \(y_{1} = 6 > -6\).
+
+    Inductive Step: First, we assume that \(y_{n} > 6\). Now we must show that if \(y_{k} > -6\),
+    then \(y_{k+1} > 6\).
+    \begin{IEEEeqnarray*}{r C l}
+      y_{k} & > & -6 \\
+      2y_{k} & > & -12 \\
+      2y_{k} - 6 & > & -18 \\
+      \frac{2y_{k} - 6}{3} & > & -6 \\
+      y_{k+1} & > & -6
+    \end{IEEEeqnarray*}
+  \item Base case:
+    \begin{IEEEeqnarray*}{r C l}
+      y_{1} & \stackrel{=}{>} & y_{2} \\
+      6 & \stackrel{=}{>} & \frac{2 \cdot 6 - 6}{3} \\
+      6 & \stackrel{=}{>} & \frac{6}{3} \\
+      6 & > & 2
+    \end{IEEEeqnarray*}
+
+    Inductive Step: We assume that \(y_{n} > y_{n+1}\). Now, we must show that if \(y_{k} > y_{k+1}\),
+    then \(y_{k+1} > y_{k+2}\). 
+    \begin{IEEEeqnarray*}{r C l}
+      y_{k} & > & y_{k+1} \\
+      2 y_{k} & > & 2 y_{k+1} \\
+      2 y_{k} - 6 & > & 2 y_{k+1} - 6 \\
+      \frac{2 y_{k} - 6}{3} & > & \frac{2 y_{k+1} - 6}{3} \\
+      y_{k+1} & > & y_{k+2}
+    \end{IEEEeqnarray*}
+    
+  \end{enumerate}
+    
+\end{enumerate}
+\end{document}

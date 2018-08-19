@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\begin{document}
+\textbf{6.2.3}
+\begin{enumerate}[(a)]
+\item For \(c \in (0, 1)\)
+  \begin{IEEEeqnarray*}{r C l"s}
+    \lim g_{n} & = & \lim \frac{c}{1 + c^{n}} \\
+    & = & \frac{\lim c}{\lim \left(1 + c^{n} \right)} \\
+    & = & \frac{\lim c}{\lim 1 + \lim c^{n}} \\
+    & = & c & Since \(0 < c < 1\), \(\lim c = \infty\), leaving only 1 in the denominator
+  \end{IEEEeqnarray*}
+  For \(c = 1\),
+  \begin{IEEEeqnarray*}{r C l}
+    g_{n}(1) & = & \frac{1}{1 + 1^{n}} \\
+    & = & 1
+  \end{IEEEeqnarray*}
+  
+  \item 
+\end{enumerate}
+
+\textbf{6.2.6}
+\textbf{6.3.2}
+\textbf{6.4.3}
+\textbf{6.5.2}
+\begin{enumerate}[(a)]
+\item Let \(a_{n} = (-1)^{n} / n! \). 
+\end{enumerate}
+
+\textbf{6.5.4}
+\end{document}
