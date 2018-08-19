@@ -4,11 +4,11 @@
 \usepackage{amssymb}
 \usepackage{enumerate}
 \author{Daniel Xu}
-\title{MATH 215 HMWK}
+\title{Chapter 1}
 \begin{document}
 \maketitle
 \begin{enumerate}
-% Exercise 1
+% Exercise 1.2.1
 \item
   \begin{enumerate}
   \item We assume that \(\sqrt{3}\) is rational. By definition, it can be
@@ -40,6 +40,8 @@
       is a perfect square. 
     
   \end{enumerate}
+
+% Exercise 1.2.2
 \item We assume that \(r\) is rational. Then, it can be written as \(p / q\), where
   \(p\) and \(q\) are natural numbers. 
   \begin{IEEEeqnarray*}{r C l}
@@ -51,6 +53,8 @@
   Since \(p\) and \(q\) are natural numbers, then \(2^{p}\) must contain a factor of 3
   and \(3^{q}\) must contain a factor of 2. However, \(2^{p}\) does not contain 3 and
   \(3^{q}\) does not contain 2, so we can conclude that \(r\) is not a rational number.
+
+% Exercise 1.2.3
 \item
   \begin{enumerate}[(a)]
   \item false. When
@@ -73,6 +77,7 @@
   \item true
   \item true
   \end{enumerate}
+% Exercise 1.2.4
 \item Let \(A_{1}\) contain 1 and every multiple of 2. Then, let \(A_{2}\) contain every multiple
   of 3 not divisible by 2. Let \(A_{3}\) contain every multiple of 5 not divisible by 2 or 3. Let
   \(A_{k}\) contain every multiple of the \(k\)th prime number not divisible by the previous \(k - 1\)
@@ -81,6 +86,50 @@
   an infinite number of elements. None of the infinites sets will intersect since all of their elements
   are relatively prime to each other. 
 
+
+% Exercise 1.2.5
+\item
+\begin{enumerate}[(a)]
+\item If \(x \in (A \cup B)^{c}\), then \(x \notin (A \cup B)\). This means that
+\(x \notin A\) or \(x \notin B\), which is what \(A^{c} \cup B^{c}\) means. 
+\item If \(x \in A^{c} \cap B^{c}\), then \(x \notin A\) or \(x \notin B\). This means
+that \(x \notin (A \cup B)\), which means \(x \in (A \cup B)^{c}\). 
+\item Since \( (A \cup B)^{c} \subset A^{c} \cup B^{c} \) and \( A^{c} \cup B^{c} \subset (A \cup B)^{c}\),
+	it is implied that \((A \cup B)^{c} = A^{c} \cap B^{c}\). 
+\end{enumerate}
+
+% Exercise 1.2.6
+\item
+\begin{enumerate}
+\item We consider the case when \(a > 0\) and \(b > 0\). Then \(a + b > 0\), so
+\(\left| a + b \right| = a + b\). Since \(a > 0\), then \(\left| a \right| = a\).
+This is similarly true for \(b\). So \(\left| a \right| + \left| b \right| = a + b\).
+By the transitive property, \(\left| a + b \right| = \left| a \right| + \left| b \right|\),
+   which verifies the triangle inequality for all \(a > 0\) and \(b > 0\). 
+
+
+We consider the case when \(a < 0\) and \(b < 0\). Then \(a + b < 0\). Thus,
+   \(\left| a + b \right| = -(a + b)\). Since \(a < 0\), \(\left| a \right| = -a\).
+   This is similarly true for \(b\). So
+   \(\left| a \right| + \left| b \right| = -a + (-b) = - (a + b)\). 
+   By the transitive property, \(\left| a + b \right| = \left| a \right| + \left| b \right|\),
+   verifying the triangle inequality for \(a < 0\) and \(b < 0\).
+   
+	\item For all numbers, it is true that the square of the absolute value of 
+	the number is greater or equal than the square of the number. Therefore
+	\begin{IEEEeqnarray*}{r C l}
+	  a^{2} + 2ab + b^{2} & \leq & |a|^{2} + 2 | a | | b| + | b |^{2} \\
+	  (a + b)^{2} & \leq & \left(| a | + | b | \right)^{2}
+	\end{IEEEeqnarray*}
+
+	\item 
+	\begin{IEEEeqnarray*}{r C l"s}
+		| a - b | & = & | a - c + c - d + d - b | \\
+					  & \leq & | a - c | + | c - d + d - b | & By Triangle Inequality \\
+					  & \leq & | a - c | + | c - d | + | d - b| & By Triangle Inequality
+	\end{IEEEeqnarray*}
+
+\end{enumerate}
 \setcounter{enumi}{9}
 \item
   \begin{enumerate}
