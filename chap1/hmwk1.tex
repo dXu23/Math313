@@ -129,16 +129,125 @@ We consider the case when \(a < 0\) and \(b < 0\). Then \(a + b < 0\). Thus,
 					  & \leq & | a - c | + | c - d | + | d - b| & By Triangle Inequality
 	\end{IEEEeqnarray*}
 
+	\item
+	\begin{IEEEeqnarray*}{r C l"s}
+	| | a | - | b | | & = & | | a - b + b | - | b | | & By identity property \\
+					  & \leq & | | a - b | + | b | - | b | | & By triangle inequality \\ 
+					  & = & | a - b |
+	\end{IEEEeqnarray*}
+
 \end{enumerate}
-\setcounter{enumi}{9}
+
+% Exercise 1.2.7
+\item 
+\begin{enumerate}
+	\item Since \(A = [0, 2]\) and \(B = [1, 4]\), then \(f(A) = [0, 4]\) and \(f(B) = [1, 16]\).
+	\(A \cap B = [1, 2]\) and \(A \cup B = [0, 4]\), so \(f \left( A \cap B \right) = [1, 4]\)
+	and \(f \left(A \cup B \right) = [0, 16]\). \(f(A) \cup f(B) = [0, 16]\), so 
+	\(f \left(A \cup B \right) = f(A) \cup f(B)\). Likewise, \(f(A) \cap f(B) = [1, 4]\), so
+	\(f \left(A \cap B \right) = f(A) \cap f(B)\). 
+
+	\item Let \(A = [0, 2]\) and \(B = [-3, 0]\). Then \(A \cap B = [0, 0]\), \(f(A) = [0, 4]\),
+	and \(f(B) = [0, 9]\). However, \(f(A \cap B) = [0, 0]\) and \(f(A) \cap f(B) = [0, 4]\). 
+	Evidently, \(f(A \cap B) \neq f(A) \cap f(B)\). 
+
+	\item In the case of \(g(A \cap B)\), it is true by definition that 
+	\(\forall g(x) \in g(A \cap B) \ldotp x \in A \cap B\). If \(x \in A \cap B\),
+	then \(x \in A\) and \(x \in B\). This implies that \(g(x) \in g(A)\) and \(g(x) \in g(B)\)
+	by definition. This is exactly what \(g(A) \cap g(B)\) is. 
+
+	\item We conjecture that for any arbitrary function \(g : \mathbb{R} \rightarrow \mathbb{R}\),
+	it is always true that \(g(A \cup B) \subset g(A) \cup g(B)\). 
+
+	\(\forall g(x) \in g(A \cup B) \ldotp x \in A \cup B\). If \(x \in A \cup B\), then \(x \in A\)
+	or \(x \in B\). In the case where \(x \in A\) but \(x \notin B\), this implies that \(g(x) \in A\),
+	which means that \(g(x) \in g(A \cup B)\). In the case where \(x \in B\) but \(x \notin A\), 
+	\(g(x) \in B\), which means that \(g(x) \in g(A \cup B)\). This is evidently also true when
+	\(x \in A\) and \(x \in B\). 
+\end{enumerate}
+
+\item 
+\begin{enumerate}[(a)]
+	\item \(f(x) = 2x\) is an example of such a function. Let \(a_{1} \in A\) and \(a_{2} \in A\), with
+	\(a_{1} \neq a_{2}\). Then \(2a_{1} \neq 2a_{2}\). However, if we choose \(3 \in \mathbb{N}\), there
+	is no natural number \(a \in \mathbb{N}\) such that \(f(a) = 3\). 
+
+	\item Let \(f(x) = | x - 2 | + 1\). Then for any \(b \in \mathbb{N}\), it is always true that 
+	\(a = b + 1\) is in \(\mathbb{N}\) and \(f(a) = b\). However, \(f(1) = 2\) and \(f(3) = 2\) even
+	though \(1 \neq 3\). 
+
+	\item
+	\begin{IEEEeqnarray*}{r C l}
+	f(x) = \begin{cases}
+			 \frac{x - 1}{2} \textrm{ if } x \textrm{ is odd} \\
+			 - \frac{x}{2} \textrm{ if } x \textrm{ is even} \\
+	       \end{cases}
+	\end{IEEEeqnarray*}
+	
+\end{enumerate}
+
+% Exercise 1.2.9
+\item
+\begin{enumerate}[(a)]
+	\item \(f^{-1} (A) = \{-2, 2\}\) and \(f^{-1} (B) = \{-1, 1\}\). \(f^{-1} (A \cap B) = [-1, 1]\)
+	and \(f^{-1} (A) \cap f^{-1} (B) = \{-1, 1\}\), so \(f^{-1} (A \cap B) = f^{-1} (A) \cap f^{-1} (B)\).
+	\(f^{-1} (A \cup B) = [-2, 2]\) and \(f^{-1} (A) \cup f^{-1} (B) = [-2, 2]\), so
+	\(f^{-1} (A \cup B) = f^{-1} (A) \cup f^{-1} (B)\).
+
+	\item \(x \in g^{-1} (A \cap B)\) implies that \(g(x) \in A \cap B\), so \(g(x) \in A\)
+	and \(g(x) \in B\). From this, we can conclude that \(x \in g^{-1} (A)\) and \(x \in g^{-1} (B)\),
+	which is equivalent to \(g^{-1} (A) \cap g^{-1} (B)\). Thus, we have shown that
+	\(x \in g^{-1} (A \cap B) \implies x \in g^{-1} (A) \cap g^{-1} (B)\), meaning
+	\(g^{-1} (A \cap B) \subset g^{-1} (A) \cap g^{-1} (B)\). We must show that 
+    \(g^{-1} (A) \cap g^{-1} (B) \subset g^{-1} (A \cap B)\)
+
+	If \(x \in g^{-1} (A) \cap g^{-1} (B)\), then \(x \in g^{-1} (A)\) and \(x \in g^{-1} (B)\). 
+	This implies that \(g(x) \in A\) and \(g(x) \in B\), meaning that \(g(x) \in A \cap B\), so
+	\(x \in g^{-1} (A \cap B)\). Thus, we have shown that 
+	\(g^{-1} (A) \cap g^{-1} (B) \subset g^{-1} (A \cap B)\).
+
+	Thus, since \(g^{-1} (A) \cap g^{-1} (B) \subset g^{-1} (A \cap B)\) and
+	\(g^{-1} (A) \cap g^{-1} (B) \subset g^{-1} (A \cap B)\), we can conclude
+	that \(g^{-1} (A \cap B) = g^{-1} (A) \cap g^{-1} (B)\).
+	
+	\(x \in g^{-1} (A \cup B)\) implies that \(g(x) \in A \cup B\), meaning that \(g(x) \in A\)
+	or \(g(x) \in B\). This is equivalent to \(x \in g^{-1} (A)\) or \(x \in g^{-1} (B)\), so
+	\(x \in g^{-1} (A) \cup g^{-1} (B)\). This, we have shown that 
+	\(g^{-1} (A \cup B) \subset g^{-1} \cup g^{-1} (B)\). 
+
+	\(x \in g^{-1} (A) \cup g^{-1} (B)\) means that \(x \in g^{-1} (A)\) or \(x \in g^{-1} (B)\). 
+	This implies that \(g(x) \in A\) or \(g(x) \in B\), which is equivalent to \(g(x) \in (A \cup B)\). 
+	From this, we conclude that \(x \in g^{-1} (A \cup B)\). Thus, we have shown that
+	\(g^{-1} (A) \cup g^{-1} (B) \subset g^{-1} (A \cup B)\).
+
+	Since \(g^{-1} (A) \cup g^{-1} (B) \subset g^{-1} (A \cup B)\) and
+	\(g^{-1} (A \cup B) \subset g^{-1} \cup g^{-1} (B)\), we can conclude that
+	\(g^{-1} (A \cup B) = g^{-1} (A) \cup g^{-1} (B)\).  
+
+
+\end{enumerate}
+	
+% Exercise 1.2.10
 \item
   \begin{enumerate}
-  \item false. Let \(a = 1\), \(b = -2\), and \(c = 8\). \(1 < -2 + 8\), yet \(1 \nless -2\).
-  \item false. See above.
-  \item false. See above.
+  \item false. Let \(a = 1\), \(b = -2\), and \(\epsilon = 8\). \(1 < -2 + 8\), yet \(1 \nless -2\).
+  \item false. Let \(a = 1\), \(b = -2\), and \(\epsilon = 8\). \(1 < -2 + 8\), yet \(1 \nless -2\).
+  \item false. Let \(a = 1\), \(b = -2\), and \(\epsilon = 8\). \(1 < -2 + 8\), yet \(1 \nleq -2\).
   \end{enumerate}
 
-\setcounter{enumi}{11}
+  % Exercise 1.2.11
+  \item 
+  \begin{enumerate}[(a)]
+	  \item There exists real number satisfying \(a < b\), such that for all \(n \in \mathbb{N}\)
+	such that \(a + 1 / n > b\). 
+
+	\item For all real numbers \(x > 0\) there exists \(n \in \mathbb{N}\) such that \(x > 1 / n\). 
+
+	\item There exists two real distinct real numbers for which there is no rational number between
+	them. 
+  \end{enumerate}
+
+% Exercise 1.2.12
 \item
   \begin{enumerate}
   \item Base Case: \(y_{1} = 6 > -6\).
@@ -154,9 +263,9 @@ We consider the case when \(a < 0\) and \(b < 0\). Then \(a + b < 0\). Thus,
     \end{IEEEeqnarray*}
   \item Base case:
     \begin{IEEEeqnarray*}{r C l}
-      y_{1} & \stackrel{=}{>} & y_{2} \\
-      6 & \stackrel{=}{>} & \frac{2 \cdot 6 - 6}{3} \\
-      6 & \stackrel{=}{>} & \frac{6}{3} \\
+      y_{1} & \stackrel{?}{>} & y_{2} \\
+      6 & \stackrel{?}{>} & \frac{2 \cdot 6 - 6}{3} \\
+      6 & \stackrel{?}{>} & \frac{6}{3} \\
       6 & > & 2
     \end{IEEEeqnarray*}
 
@@ -170,6 +279,41 @@ We consider the case when \(a < 0\) and \(b < 0\). Then \(a + b < 0\). Thus,
       y_{k+1} & > & y_{k+2}
     \end{IEEEeqnarray*}
     
+  \end{enumerate}
+
+  % Exercise 1.2.13
+  \item
+  \begin{enumerate}[(a)]
+  	\item We consider the base case. Evidently, \(A_{1}^{c} = A_{1}^{c}\)
+	by the reflexive property, so we are already done with the base case.
+
+	Now we move on to the inductive step. Now we assume that the statement
+	is true for \(n\) and we have show that if it is true for \(n = k\), 
+	then it is true for \(n = k + 1\). 
+
+	\begin{IEEEeqnarray*}{r C l"s}
+	(A_{1} \cup A_{2} \cup \ldots \cup A_{k})^{c} & = & A_{1}^{c} \cap A_{2}^{c} \cap \ldots \cap A_{k}^{c} \\
+	(A_{1} \cup A_{2} \cup \ldots \cup A_{k})^{c} \cap A_{k + 1}^{c} & = & A_{1}^{c} \cap A_{2}^{c} \cap \ldots \cap A_{k}^{c} \cap_{A_{k + 1}^{c}\\
+	(A_{1} \cup A_{2} \cup \ldots \cup A_{k} \cap A_{k + 1})^{c} & = & A_{1}^{c} \cap A_{2}^{c} \cap \ldots \cap A_{k}^{c} \cap_{A_{k + 1}^{c} & By DeMorgan's Law \\
+	\end{IEEEeqnarray*}
+
+	Therefore, we can conclude that 
+	\((A_{1} \cup A_{2} \cup \ldots \cup A_{n})^{c} & = & A_{1}^{c} \cap A_{2}^{c} \cap \ldots \cap A_{n}^{c}\)
+
+	\item Let
+    \begin{IEEEeqnarray*}{r C l}
+      B_{1} & = & \mathbb{N} = \{1, 2, 3, \dots \} \\
+      B_{2} & = & \{2, 3, 4, \ldots \} \\
+      B_{3} & = & \{3, 4, 5, \ldots \} \\
+      \ldots \\
+      B_{n} & = & \{n, n + 1, n + 2, \ldots \}
+    \end{IEEEeqnarray*}
+	Then \(\bigcap_{i = 1}^{n} B_{i} = B_{n}\), but \(\bigcap_{i = 1}^{\infty} B_{i} = \emptyset\).
+
+
+	\item
+	
+	\item 
   \end{enumerate}
     
 \end{enumerate}
